@@ -1,22 +1,44 @@
+import os
 import sys
 import nltk # write script to install nltk in grading env
-#import numpy as np
+import spacy 
+import re
 
 class qa:
     ID = ""
     question = ""
     ans = ""
     dif = ""
+    def __init__(self, ID, q, ans="", dif=""):
+        self.ID = ID
+        self.question = q
+        self.ans = ans
+        self.dif = dif
 
-    def __init__(self, _id, _q="",_ans="",_dif=""):
-        self.ID = _id
-        self.question = _q
-        self.ans = _ans
-        self.dif = _dif
+
+class story:
+    title = ""
+    ID = ""
+    date = ""
+    corpus = None
+    def __init__(self, title, ID, date, corpus):
+        self.title = title
+        self.ID = ID
+        self.date = date
+        self.corpus = corpus
 
 
-def parseStory(path):
-    return []
+def parseStory(_path):
+    input_data = []
+    with open(_path) as path:
+        input_data = [line for line in path]
+    title = input_data[0].replace("HEADLINE: ","")
+    date = input_data[1].replace("DATA: ", "")
+    ID = input_data[2].replace("STORYID: ", "")
+    index = input_data.index("TEXT:\n") + 2 # start of text
+    story_o = story(title, ID, date, input_data[index:])
+    pos_tags = [nltk.pos_tag(t) for t in story_o.corpus]
+    return story_o, pos_tags
 
 
 def parseQuestions(path):

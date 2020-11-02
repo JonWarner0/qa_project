@@ -3,9 +3,12 @@ import sys
 import nltk # write script to install externals in grading env
 from nltk import word_tokenize
 from nltk.stem import PorterStemmer as ps
+from nltk import wordnet as wn
 import re
 from nerd import ner
 
+#Wordnet quick references
+#https://www.nltk.org/howto/wordnet.html
 
 class qa:
     ID = ""
@@ -20,7 +23,8 @@ class qa:
         self.ans = ans
         self.dif = dif
         self.pos_tags = nltk.pos_tag(word_tokenize(q))
-        self.root_entity = [ps().stem(str(s)) for s in ner.name(q)]
+        #self.root_entity = [ps().stem(str(s)) for s in ner.name(q)]
+        self.root_entity = [wn.morph(s) for s in self.question]
         
 
 class story:
@@ -36,9 +40,11 @@ class story:
         self.date = date
         self.corpus = corpus
         self.pos_tags = [nltk.pos_tag(word_tokenize(t)) for t in self.corpus]
-        for p in self.corpus:
-            self.root_entity.append([ps().stem(s) for s in p])
         # currently paragraphs in corpus instead of single sentences.
+        for p in self.corpus:
+            self.root_entity.append([wn.morph(s) for s in p])
+            #self.root_entity.append([ps().stem(s) for s in p])
+      
 
 
 def extractStory(_path):

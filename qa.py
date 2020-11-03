@@ -7,11 +7,9 @@ from nltk.corpus import wordnet as wn
 from nltk.corpus import stopwords
 import nltk.data
 import re
-from nerd import ner
 
 # nltk & Wordnet quick reference
 # https://www.nltk.org/howto/wordnet.html
-
 
 """ -------- Global Definitions and Setup -------- """
 sent_detector = None # Extract sentences
@@ -37,7 +35,6 @@ class qa:
         self.ans = ans
         self.dif = dif
         self.pos_tags = nltk.pos_tag(word_tokenize(q))
-        self.root_entity = [ps().stem(str(s)) for s in ner.name(q)] # Not useful?
         
 
 class story:
@@ -54,8 +51,8 @@ class story:
         self.date = date
         self.corpus = sent_detector.tokenize(corpus) 
         self.pos_tags = [nltk.pos_tag(word_tokenize(t)) for t in self.corpus]
-        for p in self.corpus:
-            self.root_entity.append([ps().stem(s) for s in p.split()])
+        #for p in self.corpus:
+        #   self.root_entity.append([ps().stem(s) for s in p.split()])
 
 
 """ -------- QA algorithm -------- """
@@ -93,6 +90,12 @@ def extractQuestions(_path):
 
 def questionProcessing(question):
     """ Rewrite with most likely sense and attempt to match corpus """
+    #TODO 
+    # -> Use pos tags to constrain wordnet queries
+    # and generate similar sentences with bigram model from
+    # the corpus (5-10 sentences). 
+    # -> Handle stop words and stemming
+    # -> Question classification: WHO, WHAT, WHERE, WHEN, HOW : semantic types
     return []
 
 

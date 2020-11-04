@@ -1,10 +1,7 @@
 import os
 import sys
 import nltk 
-from nltk import word_tokenize
-from nltk.stem import PorterStemmer as ps
 from nltk.corpus import wordnet as wn
-from nltk.corpus import stopwords
 import nltk.data
 import re
 
@@ -14,6 +11,16 @@ import re
 """ 
 -------- Global Definitions and Setup -------- 
 """
+# regex for tagging to rid tenses
+subj_re = re.compile(r'*subj*')
+dobj_re = re.compile(r'*dobj*')
+idobj_re = re.compile(r'*pdobj*')
+noun_re = re.compile(r'PROPN | NOUN | NUM')  #Nouns and Nums together for simlicity
+verb_re = re.compile(r'VERB | AUX')
+
+
+question_word = ('who'or'what'or'when'or'where'or'how'or'why')
+
 sent_detector = None # Extract sentences
 try:
     sent_detector = nltk.data.load('tokenizers/punkt/english.pickle')
@@ -24,7 +31,6 @@ except Exception:
 
 import spacy #TODO -> works on mine. Verify bash cmds for all
 dependency_parser = spacy.load('en_core_web_sm') #TODO remove onese resolved
-# t.text, t.tag_, t.head.text, t.dep_
 """
 dependency_parser = None
 try:
@@ -46,16 +52,16 @@ class qa:
     question = ""
     ans = None
     dif = ""
-    pos_tags = None 
     dep_parse = None 
+    target = None 
 
     def __init__(self, ID, q, ans=None, dif=None):
         self.ID = ID
         self.question = q
         self.ans = ans
         self.dif = dif
-        #self.pos_tags = nltk.pos_tag(word_tokenize(q))
         self.dep_parse = dependency_parser(self.question)
+        self.target = composition(self.dep_parse)
 
 
 class story:
@@ -63,17 +69,43 @@ class story:
     ID = ""
     date = ""
     corpus = None #list of sentences
-    pos_tags = None
     dep_parse = None 
+    targets = []
 
     def __init__(self, title, ID, date, corpus):
         self.title = title
         self.ID = ID
         self.date = date
         self.corpus = sent_detector.tokenize(corpus) 
-        #self.pos_tags = [nltk.pos_tag(word_tokenize(t)) for t in self.corpus]
         self.dep_parse = [dependency_parser(s) for s in self.corpus]
+        self.targets = [composition(s) for s in self.dep_parse]
 
+
+class composition:
+    """ Takes a spacy.Doc arguement and extracts needed information """
+    sent = ''
+    subj = ''
+    dobj = ''
+    idobj = ''
+    nouns = []
+    verbs = set()
+    q_tag = None  #word & attachment -> predict answer
+    #adj = [] # add later for descriptors etc.
+    def __init__(self, sent):
+        self.sent = sent.text
+        for t in sent:
+            if t.lemma == question_word:
+                self.q_tag = (t.lemma, t.dep_)
+            if t.dep_ == 'nsubj':
+                self.subj = t.lemma
+            if t.dep_ == 'dobj':
+                self.dobj = t.lemma
+            elif t.dep_ == 'pobj':
+                self.idobj = t.lemma
+            if t.pos_ == ('VERB'): #or 'AUX'):
+                self.verbs.add(t.lemma)
+            elif t.pos == ('NOUN' or 'PROPN'):
+                self.nouns.append(t.lemma)
 
 """ 
 -------- QA algorithm -------- 
@@ -110,25 +142,24 @@ def extractQuestions(_path):
     return questions
 
 
-def getQuestionTarget(question):
-    """ Rewrite with most likely sense and attempt to match corpus """
-    #TODO -> Dependency parse and travel from VP to NP and check the respective
-    # hypernyms and the hypernyms synsets for matching. Extract all NP's
-    # Calculate cosine similarity of Sentence and Question (?)
-    root_idx = 0
-    expansion = []
-    for t in question.dep_parse:
-        expansion.append([t.text, t.tag_, t.head.text, t.dep_])
-        if t.dep_ == 'ROOT':
-            root_idx = len(expansion)-1
-    
-    return []
-
-
 def generateAnswer(story, question):
     """ Computes overlap of root words. Includes stop words at this time """
+    #TODO -> Add hypernyms and NER:(spacy.Doc).entity
     candidates = []
-    return candidates
+    for comp in story.targets: #gather candidate with overlapping subj and verbs(50%)
+        if comp.subj == question.target.subj:
+            verb_overlap = (comp.verbs).intersection(question.target.verbs)
+            if (len(verb_overlap)) / (len(comp.verbs)+1) >= 0.5: #mismatch threshold
+                candidates.append(comp)
+    if len(candidates) == 0:
+        return ''
+    print('--> ', question.ID, [c.sent for c in candidates])
+    return candidates[0].sent
+
+# Most likely parses
+# What -> PRON : dobj
+# How | Where | When -> ADV : advmod
+# Who -> PRON : nsubj
 
 
 def outputResponseFile(path, answers):

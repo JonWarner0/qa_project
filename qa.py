@@ -11,23 +11,12 @@ import re
 """ 
 -------- Global Definitions and Setup -------- 
 """
-# regex for tagging to rid tenses
-subj_re = re.compile(r'*subj*')
-dobj_re = re.compile(r'*dobj*')
-idobj_re = re.compile(r'*pdobj*')
-noun_re = re.compile(r'PROPN | NOUN | NUM')  #Nouns and Nums together for simlicity
-verb_re = re.compile(r'VERB | AUX')
-
-
-question_word = ('who'or'what'or'when'or'where'or'how'or'why')
-
 sent_detector = None # Extract sentences
 try:
     sent_detector = nltk.data.load('tokenizers/punkt/english.pickle')
 except Exception:
     nltk.download('punkt')
     sent_detector = nltk.data.load('tokenizers/punkt/english.pickle')
-
 
 import spacy #TODO -> works on mine. Verify bash cmds for all
 dependency_parser = spacy.load('en_core_web_sm') #TODO remove onese resolved
@@ -42,6 +31,13 @@ except Exception:
     import spacy
     dependency_parser = spacy.load('en_core_web_sm')
 """
+# regex for tagging to rid tenses
+subj_re = re.compile(r'[a-z]*subj[a-z]*')
+dobj_re = re.compile(r'[a-z]*dobj[a-z]*')
+idobj_re = re.compile(r'[a-z]*pdobj[a-z]*')
+noun_re = re.compile(r'PROPN | NOUN | NUM')  #Nouns and Nums together for simlicity
+verb_re = re.compile(r'VERB') # TODO add AUX or make own with questions words?
+question_word = re.compile(r'who|what|when|where|how|why')
 
 
 """ 
@@ -94,23 +90,23 @@ class composition:
     def __init__(self, sent):
         self.sent = sent.text
         for t in sent:
-            if t.lemma == question_word:
-                self.q_tag = (t.lemma, t.dep_)
-            if t.dep_ == 'nsubj':
-                self.subj = t.lemma
-            if t.dep_ == 'dobj':
-                self.dobj = t.lemma
-            elif t.dep_ == 'pobj':
-                self.idobj = t.lemma
-            if t.pos_ == ('VERB'): #or 'AUX'):
-                self.verbs.add(t.lemma)
-            elif t.pos == ('NOUN' or 'PROPN'):
-                self.nouns.append(t.lemma)
+            if question_word.search(t.lemma_):
+                self.q_tag = (t.lemma_, t.dep_)
+            if subj_re.search(t.dep_):
+                self.subj = t.lemma_
+            if dobj_re.search(t.dep_):
+                self.dobj = t.lemma_
+            elif idobj_re.search(t.dep_):
+                self.idobj = t.lemma_
+            if verb_re.search(t.pos_): 
+                self.verbs.add(t.lemma_)
+            elif noun_re.search(t.pos_):
+                self.nouns.append(t.lemma_)
+
 
 """ 
 -------- QA algorithm -------- 
 """
-
 def extractStory(_path):
     """ Extract story info and return a story object """
     input_data = []
@@ -153,11 +149,10 @@ def generateAnswer(story, question):
                 candidates.append(comp)
     if len(candidates) == 0:
         return ''
-    print('--> ', question.ID, [c.sent for c in candidates])
     return candidates[0].sent
 
 # Most likely parses
-# What -> PRON : dobj
+# What -> PRON : dobj | nsubj
 # How | Where | When -> ADV : advmod
 # Who -> PRON : nsubj
 

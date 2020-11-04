@@ -11,7 +11,9 @@ import re
 # nltk & Wordnet quick reference
 # https://www.nltk.org/howto/wordnet.html
 
-""" -------- Global Definitions and Setup -------- """
+""" 
+-------- Global Definitions and Setup -------- 
+"""
 sent_detector = None # Extract sentences
 try:
     sent_detector = nltk.data.load('tokenizers/punkt/english.pickle')
@@ -20,22 +22,41 @@ except Exception:
     sent_detector = nltk.data.load('tokenizers/punkt/english.pickle')
 
 
-""" -------- Class Definitions -------- """
+import spacy #TODO -> works on mine. Verify bash cmds for all
+dependency_parser = spacy.load('en_core_web_sm') #TODO remove onese resolved
+# t.text, t.tag_, t.head.text, t.dep_
+"""
+dependency_parser = None
+try:
+    import spacy    # Dependency parsing install
+    dependency_parser = spacy.load('en_core_web_sm') 
+except Exception:
+    os.system('pip3 install -U spacy')
+    #os.system('python3 -m spacy download en_core_web_sm')
+    import spacy
+    dependency_parser = spacy.load('en_core_web_sm')
+"""
+
+
+""" 
+-------- Class Definitions -------- 
+"""
 class qa:
     ID = ""
     question = ""
     ans = None
     dif = ""
     pos_tags = None 
-    root_entity = None # roots of each word
+    dep_parse = None 
 
     def __init__(self, ID, q, ans=None, dif=None):
         self.ID = ID
         self.question = q
         self.ans = ans
         self.dif = dif
-        self.pos_tags = nltk.pos_tag(word_tokenize(q))
-        
+        #self.pos_tags = nltk.pos_tag(word_tokenize(q))
+        self.dep_parse = dependency_parser(self.question)
+
 
 class story:
     title = ""
@@ -43,19 +64,20 @@ class story:
     date = ""
     corpus = None #list of sentences
     pos_tags = None
-    root_entity = [] # roots of each word
+    dep_parse = None 
 
     def __init__(self, title, ID, date, corpus):
         self.title = title
         self.ID = ID
         self.date = date
         self.corpus = sent_detector.tokenize(corpus) 
-        self.pos_tags = [nltk.pos_tag(word_tokenize(t)) for t in self.corpus]
-        #for p in self.corpus:
-        #   self.root_entity.append([ps().stem(s) for s in p.split()])
+        #self.pos_tags = [nltk.pos_tag(word_tokenize(t)) for t in self.corpus]
+        self.dep_parse = [dependency_parser(s) for s in self.corpus]
 
 
-""" -------- QA algorithm -------- """
+""" 
+-------- QA algorithm -------- 
+"""
 
 def extractStory(_path):
     """ Extract story info and return a story object """
@@ -88,25 +110,25 @@ def extractQuestions(_path):
     return questions
 
 
-def questionProcessing(question):
+def getQuestionTarget(question):
     """ Rewrite with most likely sense and attempt to match corpus """
-    #TODO 
-    # -> Use pos tags to constrain wordnet queries
-    # and generate similar sentences with bigram model from
-    # the corpus (5-10 sentences). 
-    # -> Handle stop words and stemming
-    # -> Question classification: WHO, WHAT, WHERE, WHEN, HOW : semantic types
+    #TODO -> Dependency parse and travel from VP to NP and check the respective
+    # hypernyms and the hypernyms synsets for matching. Extract all NP's
+    # Calculate cosine similarity of Sentence and Question (?)
+    root_idx = 0
+    expansion = []
+    for t in question.dep_parse:
+        expansion.append([t.text, t.tag_, t.head.text, t.dep_])
+        if t.dep_ == 'ROOT':
+            root_idx = len(expansion)-1
+    
     return []
 
 
 def generateAnswer(story, question):
     """ Computes overlap of root words. Includes stop words at this time """
     candidates = []
-    q_entities = set(question.root_entity)
-    for i in range(len(story.root_entity)): # root word overlap
-        candidates.append((i, set(story.root_entity[i]).union(q_entities)))
-    best = sorted(candidates, key=lambda k: len(k[1]))[-1] #most overlap
-    return story.corpus[best[0]] # Sentence that most likely contains answer
+    return candidates
 
 
 def outputResponseFile(path, answers):

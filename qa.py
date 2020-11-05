@@ -8,7 +8,7 @@ import re
 """ 
 -------- Global Definitions and Setup -------- 
 """
-sent_detector = None # Extract sentences
+sent_detector = None # Sentence boundaries
 try:
     sent_detector = nltk.data.load('tokenizers/punkt/english.pickle')
 except Exception:
@@ -28,12 +28,13 @@ except Exception:
     import spacy
     dependency_parser = spacy.load('en_core_web_sm')
 """
-# regex for tagging to rid tenses
+# regex extracting tags
 subj_re = re.compile(r'[a-z]*subj[a-z]*')
 dobj_re = re.compile(r'[a-z]*dobj[a-z]*')
 idobj_re = re.compile(r'[a-z]*pdobj[a-z]*')
-noun_re = re.compile(r'PROPN | NOUN | NUM')  #Nouns and Nums together for simlicity
+noun_re = re.compile(r'PROPN | PRON | NOUN | NUM')  #Nouns and Nums together for simlicity
 verb_re = re.compile(r'VERB') # TODO add AUX or make own with questions words?
+adj_re = re.compile(r'ADJ')
 question_word = re.compile(r'who|what|when|where|how|why')
 
 
@@ -41,13 +42,6 @@ question_word = re.compile(r'who|what|when|where|how|why')
 -------- Class Definitions -------- 
 """
 class qa:
-    ID = ""
-    question = ""
-    ans = None
-    dif = ""
-    dep_parse = None 
-    target = None 
-
     def __init__(self, ID, q, ans=None, dif=None):
         self.ID = ID
         self.question = q
@@ -58,13 +52,6 @@ class qa:
 
 
 class story:
-    title = ""
-    ID = ""
-    date = ""
-    corpus = None #list of sentences
-    dep_parse = None 
-    targets = None
-
     def __init__(self, title, ID, date, corpus):
         self.title = title
         self.ID = ID
@@ -80,22 +67,14 @@ class story:
 
 class composition:
     """ Takes a spacy.Doc arguement and extracts needed information """
-    sent = ''
-    subj = ''
-    dobj = ''
-    idobj = ''
-    nouns = None
-    verbs = None
-    q_tag = None  #word & attachment -> predict answer
-    score = 0 # Add synonym, hypernym overlap of verbs and nouns
-    ner = None
-
     def __init__(self, sent):
         self.sent = sent.text
         self.ner = {t.text for t in sent.ents} #add .label_ for ORG, etc..
         self.nouns = set()
+        self.noun_phrase = {s for t in sent.noun_chunks for s in t.text.split()}
         self.verbs = set()
-        self.ner = set()
+        self.adj = set()
+        self.score = 0
         for t in sent:
             if question_word.search(t.lemma_):
                 self.q_tag = t.lemma_
@@ -109,12 +88,13 @@ class composition:
                 self.verbs.add(t.lemma_)
             elif noun_re.search(t.pos_):
                 self.nouns.add(t.lemma_)
+            elif adj_re.search(t.pos_):
+                self.adj.add(t.lemma_)
 
 
 """ 
 -------- QA algorithm -------- 
 """
-
 # Most likely parses
 # What -> PRON : dobj | nsubj
 # How | Where | When -> ADV : advmod
@@ -127,82 +107,75 @@ def who_what_questions(story, question):
         a score, the sentences can be ranked by most likely to contain the answer.
     """
     candidates = set()
-    for comp in story.targets: #gather candidate with overlapping subj and verbs(50%)
-        s, s_hyper = getSynsetsAndHypernyms(comp.verbs)
-        q, q_hyper = getSynsetsAndHypernyms(question.target.verbs)
-        # Compute overlap
-        verb_overlap = (q).intersection(s)
-        hyper_overlap = q_hyper.intersection(s_hyper)
-        # Rank
-        syn_score = (len(verb_overlap)) / (len(comp.verbs)+1)
-        hyper_score = (len(hyper_overlap)) / (len(comp.verbs)+1)
-        # Check matching threshold and update
-        ner_overlap = len((comp.ner).intersection(question.target.ner))
-        noun_overlap = len((comp.nouns).intersection(question.target.nouns))
-        if ner_overlap > 1: 
-            comp.score += ner_overlap
+    for comp in rootMatching(story,question): #gather candidate with overlapping subj and verbs(50%)
+        ner_overlap = computeOverlap(comp.ner,question.target.ner)
+        noun_overlap = computeOverlap(comp.nouns,question.target.nouns)
+        np_overlap = computeOverlap(comp.noun_phrase,question.target.noun_phrase)
+        if (ner_overlap or noun_overlap or np_overlap) > 0: # Constrain expanded
+            comp.score += ner_overlap + np_overlap
             candidates.add(comp)
-        if noun_overlap > 1: 
-            comp.score += ner_overlap
-            candidates.add(comp)
-        if syn_score >= 0.1: 
-            comp.score += syn_score
-            candidates.add(comp)
-        if hyper_score >= 0.1:
-            comp.score += syn_score
-            candidates.add(comp)
+            s, s_hyper = getSynsetsAndHypernyms(comp.verbs, wn.VERB)
+            q, q_hyper = getSynsetsAndHypernyms(question.target.verbs, wn.VERB)
+            # Compute overlap
+            verb_overlap = computeOverlap(q,s)
+            hyper_overlap = computeOverlap(q_hyper,s_hyper)
+            comp.score += verb_overlap + hyper_overlap
     if len(candidates) == 0:
         return ''
-    #TODO do NER here ?
     return max(candidates, key=lambda k:k.score).sent
 
 
 def how_where_when_question(story,question):
-    #TODO IS SAME AS ABOVE! CHANGE ME!
     candidates = set()
-    for comp in story.targets: #gather candidate with overlapping subj and verbs(50%)
-        #print('comp: ', comp.verbs)
-        #print('q: ', question.target.verbs,'\n')
-        s, s_hyper = getSynsetsAndHypernyms(comp.verbs)
-        q, q_hyper = getSynsetsAndHypernyms(question.target.verbs)
-        #print(s,q,s_hyper,q_hyper,'\n')
+    for comp in rootMatching(story,question): #gather candidate with overlapping subj and verbs(50%)
+        sv, sv_hyper = getSynsetsAndHypernyms(comp.verbs, wn.VERB)
+        qv, qv_hyper = getSynsetsAndHypernyms(question.target.verbs, wn.VERB)
+        s_adj, s_adj_hyper = getSynsetsAndHypernyms(comp.verbs, wn.ADJ)
+        q_adj, q_adj_hyper = getSynsetsAndHypernyms(question.target.verbs, wn.ADJ)
         # Compute overlap
-        verb_overlap = (q).intersection(s)
-        hyper_overlap = q_hyper.intersection(s_hyper)
-        # Rank
-        syn_score = (len(verb_overlap)) / (len(comp.verbs)+1)
-        hyper_score = (len(hyper_overlap)) / (len(comp.verbs)+1)
-        # Check matching threshold and update
-        ner_overlap = len((comp.ner).intersection(question.target.ner))
-        noun_overlap = len((comp.nouns).intersection(question.target.nouns))
-        if ner_overlap > 1: 
-            comp.score += ner_overlap
-            candidates.add(comp)
-        if noun_overlap > 1: 
-            comp.score += ner_overlap
-            candidates.add(comp)
-        if syn_score >= 0.1: 
-            comp.score += syn_score
-            candidates.add(comp)
-        if hyper_score >= 0.1:
-            comp.score += syn_score
-            candidates.add(comp)
+        overlap = []
+        overlap.append(computeOverlap(qv,sv))
+        overlap.append(computeOverlap(qv_hyper, sv_hyper))
+        overlap.append(computeOverlap(q_adj,s_adj))
+        overlap.append(computeOverlap(q_adj_hyper,s_adj_hyper))
+        overlap.append(computeOverlap(comp.ner,question.target.ner))
+        overlap.append(computeOverlap(comp.nouns, question.target.nouns))
+        comp.score += sum(overlap)
+        candidates.add(comp)
     if len(candidates) == 0:
         return ''
     return max(candidates, key=lambda k:k.score).sent
 
 
-def getSynsetsAndHypernyms(words):
+def computeOverlap(s1,s2):
+    return len(s1.intersection(s2))
+
+
+def rootMatching(story, question):
+    candidates = []
+    q_roots = {chunk.root.head.lemma_ for chunk in question.dep_parse.noun_chunks}
+    for i in range(len(story.dep_parse)):
+        roots = {chunk.root.head.lemma_ for chunk in story.dep_parse[i].noun_chunks}
+        s, hyper = getSynsetsAndHypernyms(roots, wn.VERB)
+        q, q_hyper = getSynsetsAndHypernyms(q_roots, wn.VERB)
+        roots = s.union(hyper)
+        q_roots = q.union(q_hyper)
+        if computeOverlap(q_roots, roots) > 0:
+            candidates.append(story.targets[i])
+    return candidates
+
+
+def getSynsetsAndHypernyms(words, pos_):
     """ Uses WordNet to gather the synonyms-len(3) and hypernyms-len(9)"""
     synonyms = words.copy()
     hypernyms = set()
     counter = 0 # limit synonyms and hypernyms
     for w in words:
-        for syns in wn.synsets(w, pos=wn.VERB):
-            if counter > 3: # take only top 3 synonyms 
+        for syns in wn.synsets(w, pos=pos_):
+            if counter > 2: # take only top 3 synonyms 
                 break
             synonyms.add(syns.name().split('.')[0])
-            for s in syns.hypernyms()[:3]:
+            for s in syns.hypernyms()[:2]:
                 hypernyms.add(s.name().split('.')[0])
             counter += 1
     return synonyms, hypernyms

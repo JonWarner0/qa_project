@@ -215,11 +215,11 @@ def extractQuestions(_path):
     return questions
 
 
-def outputResponseFile(path, answers):
+def outputResponseFile(answers):
     """ Generates the Response.txt file with questions and answers """ 
-    with open(path+'/Response.txt', 'w') as file:
-        for q_a in answers:
-            file.write('QuestionID: {}\nAnswer: {}\n\n'.format(q_a.ID, q_a.ans))
+    for q_a in answers:
+       print('QuestionID: {}'.format(q_a.ID))
+       print('Answer: {}\n'.format(q_a.ans))
 
 
 if __name__ == "__main__":
@@ -239,4 +239,4 @@ if __name__ == "__main__":
             q.ans = getAnswer(story,q)
             all_questions_answers.append(q)
             story.reset_scores()
-    outputResponseFile(os.getcwd(), all_questions_answers)
+    outputResponseFile(all_questions_answers)

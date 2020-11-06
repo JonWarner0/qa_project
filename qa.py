@@ -16,19 +16,17 @@ except Exception:
     nltk.download('punkt')
     sent_detector = nltk.data.load('tokenizers/punkt/english.pickle')
 
-import spacy #TODO -> works on mine. Verify bash cmds for all
-dependency_parser = spacy.load('en_core_web_sm') #TODO remove once resolved
-"""
+
 dependency_parser = None
 try:
     import spacy    # Dependency parsing install
     dependency_parser = spacy.load('en_core_web_sm') 
 except Exception:
     os.system('pip3 install -U spacy')
-    #os.system('python3 -m spacy download en_core_web_sm')
+    os.system('python3 -m spacy download en_core_web_sm')
     import spacy
     dependency_parser = spacy.load('en_core_web_sm')
-"""
+
 # regex extracting tags
 subj_re = re.compile(r'[a-z]*subj[a-z]*')
 dobj_re = re.compile(r'[a-z]*dobj[a-z]*')

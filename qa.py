@@ -1,16 +1,23 @@
 import os
 import sys
 import nltk 
-from nltk.corpus import wordnet as wn
-import nltk.data
 import re
 
 
 """ 
 -------- Global Definitions and Setup/Downloads -------- 
 """
+try:
+    from nltk.corpus import wordnet as wn
+except:
+    os.system('python3 -m nltk.downloader wordnet')
+    nltk.download('wordnet')
+    from nltk.corpus import wordnet as wn
+
+
 sent_detector = None # Sentence boundaries
 try:
+    import nltk.data
     sent_detector = nltk.data.load('tokenizers/punkt/english.pickle')
 except Exception:
     nltk.download('punkt')

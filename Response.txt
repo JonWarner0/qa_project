@@ -1,0 +1,18 @@
+QuestionID: 1999-W02-5-1
+Answer: South Queens Junior High School is taking aim at the fitness market
+
+QuestionID: 1999-W02-5-2
+Answer: South Queens Junior High School is taking aim at the fitness market
+
+QuestionID: 1999-W02-5-3
+Answer: Schools are not set up to make profits or promote businesses.
+
+QuestionID: 1999-W02-5-5
+Answer: The club, operated by a non-profit society made up of school and community volunteers, has sold more than 30 memberships and hired a full-time co-ordinator.
+
+QuestionID: 1999-W02-5-6
+Answer: Principal Betty Jean Aucoin says the club is a first for a Nova Scotia public school
+
+QuestionID: 1999-W02-5-7
+Answer: Memberships cost $180 a year for adults and $135 for students and seniors.
+

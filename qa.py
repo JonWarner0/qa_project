@@ -27,6 +27,7 @@ except Exception:
     import spacy
     dependency_parser = spacy.load('en_core_web_sm')
 
+
 # regex extracting tags
 subj_re = re.compile(r'[a-z]*subj[a-z]*')
 dobj_re = re.compile(r'[a-z]*dobj[a-z]*')

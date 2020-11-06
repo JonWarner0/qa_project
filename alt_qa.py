@@ -4,6 +4,7 @@ import nltk
 from nltk.corpus import wordnet as wn
 import nltk.data
 import re
+import string
 
 """ 
 -------- Global Definitions and Setup/Downloads -------- 
@@ -35,6 +36,8 @@ idobj_re = re.compile(r'[a-z]*pdobj[a-z]*')
 noun_re = re.compile(r'PROPN | PRON | NOUN | NUM')  #Nouns and Nums together for simlicity
 verb_re = re.compile(r'VERB') # TODO add AUX or make own with questions words?
 adj_re = re.compile(r'ADJ')
+root_re = lambda k: re.compile(r'[a-z]*{}[a-z]*'.format(k))
+punc_re = re.compile(r"[\w']+|[.,!?;]")
 question_word = re.compile(r'who|what|when|where|how|why')
 
 
@@ -68,9 +71,11 @@ class story:
 class composition:
     """ Takes a spacy.Doc arguement and extracts needed information """
     def __init__(self, sent):
-        self.sent = sent.text
+        self.sent = sent.text[:-1]
+        self.raw = self.sent.translate(str.maketrans('', '', string.punctuation)) 
         self.ner = {t.text for t in sent.ents} #add .label_ for ORG, etc..
         self.nouns = set()
+        self.no_lem_verb = dict()
         self.noun_phrase = {t.text for t in sent.noun_chunks}
         self.verbs = set()
         self.adj = set()
@@ -85,7 +90,10 @@ class composition:
             elif idobj_re.search(t.dep_):
                 self.idobj = t.lemma_
             if verb_re.search(t.pos_): 
-                self.verbs.add(t.lemma_)
+                self.verbs.add(t.lemma_)    #word was hyphenated and cant be found
+                r = root_re(t.lemma_).search(t.text)
+                if r:
+                    self.no_lem_verb[t.lemma_] = punc_re.findall(self.sent).index(r.group(0))
             elif noun_re.search(t.pos_):
                 self.nouns.add(t.lemma_)
             elif adj_re.search(t.pos_):
@@ -100,71 +108,37 @@ class composition:
 # How | Where | When -> ADV : advmod
 # Who -> PRON : nsubj
 
-def who_what_questions(story, question):
-    """ Get the synonyms and hypernyms of the verbs and nouns, compute they're
-        overlap, then divide them by them by the questions target verbs
-        (with +1 to avoid division by 0). By using the amount of overlap as 
-        a score, the sentences can be ranked by most likely to contain the answer.
-    """
-    candidates = set()
-    for comp in rootMatching(story,question): 
-        ner_overlap = computeOverlap(comp.ner,question.target.ner)
-        noun_overlap = computeOverlap(comp.nouns,question.target.nouns)
-        np_overlap = computeOverlap(comp.noun_phrase, question.target.noun_phrase)
-        if (ner_overlap or noun_overlap or np_overlap) > 0: # Constrain expanded
-            s, s_hyper = getSynsetsAndHypernyms(comp.verbs, wn.VERB)
-            q, q_hyper = getSynsetsAndHypernyms(question.target.verbs, wn.VERB)
-            verb_overlap = computeOverlap(q,s)
-            hyper_overlap = computeOverlap(q_hyper,s_hyper)
-            comp.score += verb_overlap + hyper_overlap
-            comp.score += ner_overlap + np_overlap + noun_overlap
-            candidates.add(comp)
-    if len(candidates) == 0:
-        return ''
-    return max(candidates, key=lambda k:k.score).sent
+def traverseTree(story, question): # FOR VERBED QUESTIONS
+    candidate_sents = []
+    for target in story.targets:
+        syns_v, hyper_v = getSynsetsAndHypernyms(target.verbs, wn.VERB)
+        s = syns_v.union(hyper_v)
+        for v in s:
+            syns_q_v, hyper_q_v = getSynsetsAndHypernyms(question.target.verbs, wn.VERB)
+            q = syns_q_v.union(hyper_q_v)
+            if v in q: 
+                candidate_sents.append((target, v))
+    candidate_phrase = []
+    for target, verb in candidate_sents:
+        print('-->', target.sent,'\n',question.question, '----', verb, '\n')
+        if verb in target.no_lem_verb.keys():
+            #weird indexing mapping to get the correct dependency parse
+            idx = target.no_lem_verb[verb]
+            sent_idx = story.targets.index(target)
+            sent = story.dep_parse[sent_idx] 
+            # Extracts phrase based on dependencies
+            # currently not traveling far enough. need NP conditional stop
+            #left = [t.text for t in sent[idx].lefts]
+            #right = [t.text for t in sent[idx].rights]
+            #candidate_phrase.append(' '.join(left) +  ' '.join(right))
+            candidate_phrase.append(sent.text)
+    if len(candidate_phrase) == 0:
+        return ' '
+    print('\n\n', 'Candidates: ', candidate_phrase, '\n\n\n')
+    return candidate_phrase[0]
 
-
-def how_where_when_question(story,question):
-    candidates = set()
-    for comp in rootMatching(story, question): 
-        sv, sv_hyper = getSynsetsAndHypernyms(comp.verbs, wn.VERB)
-        qv, qv_hyper = getSynsetsAndHypernyms(question.target.verbs, wn.VERB)
-        s_adj, s_adj_hyper = getSynsetsAndHypernyms(comp.adj, wn.ADJ)
-        q_adj, q_adj_hyper = getSynsetsAndHypernyms(question.target.adj, wn.ADJ)
-        # Compute overlap
-        overlap = []
-        overlap.append(computeOverlap(qv,sv))
-        overlap.append(computeOverlap(qv_hyper, sv_hyper))
-        overlap.append(computeOverlap(q_adj,s_adj))
-        overlap.append(computeOverlap(q_adj_hyper,s_adj_hyper))
-        overlap.append(computeOverlap(comp.ner,question.target.ner))
-        overlap.append(computeOverlap(comp.nouns, question.target.nouns))
-        comp.score += sum(overlap)
-        candidates.add(comp)
-    if len(candidates) == 0:
-        return ''
-    return max(candidates, key=lambda k:k.score).sent
-
-
-def computeOverlap(s1,s2):
-    ex1 = {s for t in s1 for s in t.split()}
-    ex2 = {s for t in s2 for s in t.split()}
-    return len(ex1.intersection(ex2))
-
-
-def rootMatching(story, question):
-    candidates = []
-    q_roots = {chunk.root.head.lemma_ for chunk in question.dep_parse.noun_chunks}
-    for i in range(len(story.dep_parse)):
-        roots = {chunk.root.head.lemma_ for chunk in story.dep_parse[i].noun_chunks}
-        s, hyper = getSynsetsAndHypernyms(roots, wn.VERB)
-        q, q_hyper = getSynsetsAndHypernyms(q_roots, wn.VERB)
-        roots = s.union(hyper)
-        q_roots = q.union(q_hyper)
-        if len(q_roots.union(roots)) > 0:
-            candidates.append(story.targets[i])
-    return candidates
-
+def nounMatching(story, question):
+    pass
 
 def getSynsetsAndHypernyms(words, pos_):
     """ Uses WordNet to gather the synonyms-len(3) and hypernyms-len(9)"""
@@ -210,7 +184,7 @@ def extractQuestions(_path):
         for line in path: # Extract labels
             if line == '\n':
                 ID = q[0].replace("QuestionID: ", "").strip('\n')
-                question = q[1].replace("Question: ", "")
+                question = q[1].replace("Question: ", "").strip('\n')
                 dif = q[2].replace("Difficulty: ", "")
                 questions.append(qa(ID, question, None, dif))
                 q = []
@@ -240,10 +214,7 @@ if __name__ == "__main__":
         questions = extractQuestions(directory+current_file+".questions")
         # Send the questions to their respective solver
         for q in questions:
-            if q.target.q_tag == ('who' or 'what'):
-                q.ans = who_what_questions(story, q)
-            else:
-                q.ans = how_where_when_question(story, q)
+            q.ans = traverseTree(story,q)
             all_questions_answers.append(q)
             story.reset_scores()
     outputResponseFile(os.getcwd(), all_questions_answers)

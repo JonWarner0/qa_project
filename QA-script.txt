@@ -1,3 +1,4 @@
+pip3 install --user -U nltk
 python3 -m nltk.downloader wordnet
 pip3 install -U spacy
 python3 -m spacy download en_core_web_sm

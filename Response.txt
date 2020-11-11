@@ -1,27 +1,18 @@
-QuestionID: 1999-W03-5-2
-Answer: They were just a group of young women from the same school who liked to play basketball.
+QuestionID: 1999-W02-5-1
+Answer: South Queens Junior High School is taking aim at the fitness market
 
-QuestionID: 1999-W03-5-3
-Answer: They were just a group of young women from the same school who liked to play basketball.
+QuestionID: 1999-W02-5-2
+Answer: South Queens Junior High School is taking aim at the fitness market
 
-QuestionID: 1999-W03-5-4
-Answer: Babe Belanger played with the Grads from 1929 to 1937
+QuestionID: 1999-W02-5-3
+Answer: South Queens Junior High School is taking aim at the fitness market
 
-QuestionID: 1999-W03-5-5
-Answer: They were just a group of young women from the same school who liked to play basketball.
+QuestionID: 1999-W02-5-5
+Answer: The club, operated by a non-profit society made up of school and community volunteers, has sold more than 30 memberships and hired a full-time co-ordinator
 
-QuestionID: 1999-W03-5-6
-Answer: Her team was known as the Edmonton Grads
+QuestionID: 1999-W02-5-6
+Answer: Principal Betty Jean Aucoin says the club is a first for a Nova Scotia public school
 
-QuestionID: 1999-W03-5-7
-Answer: They were just a group of young women from the same school who liked to play basketball.
-
-QuestionID: 1999-W03-5-8
-Answer: They were just a group of young women from the same school who liked to play basketball.
-
-QuestionID: 1999-W03-5-9
-Answer: Babe Belanger played with the Grads from 1929 to 1937
-
-QuestionID: 1999-W03-5-10
-Answer: But her daughter says the scrapbooks she found in the family's basement show she was a part of a team that was every bit as sensational as the Edmonton Oilers in Gretzky's time
+QuestionID: 1999-W02-5-7
+Answer: Memberships cost $180 a year for adults and $135 for students and seniors
 

@@ -36,8 +36,8 @@ noun_re = re.compile(r'PROPN | PRON | NOUN | NUM')  #Nouns and Nums together for
 verb_re = re.compile(r'VERB') # TODO add AUX or make own with questions words?
 adj_re = re.compile(r'ADJ')
 root_re = lambda k: re.compile(r'[a-z]*{}[a-z]*'.format(k))
-punc_re = re.compile(r"[\w']+|[.,!?;]") # findall to match dep_parse indexing
-question_word = re.compile(r'who|what|when|where|how|why')
+punc_re = re.compile(r"[\w']+|[.,!?;]") # findall to match dep_parse indexing on tokens
+question_word = re.compile(r'(?i)who|what|when|where|how|why')
 
 
 """ 
@@ -101,18 +101,11 @@ class composition:
 """ 
 -------- QA algorithm -------- 
 """
-# Most likely pos answer?
-# What -> PRON : dobj | nsubj
-# How | Where | When -> ADV : advmod
-# Who -> PRON : nsubj
-
 def getAnswer(story,question):
-    verb_candidates = verbMatching(story,question)
-    noun_candidates = nounMatching(story,question)
-    #return max(story.target, key=lambda k:k.score)#for when scoring works right
-    if len(verb_candidates) > 0:
-        return verb_candidates
-    return noun_candidates
+    verbMatching(story,question)
+    nounMatching(story,question)
+    return max(story.targets, key=lambda k:k.score).sent #highest scoring sentence
+
 
 def verbMatching(story, question): # FOR VERBED QUESTIONS
     candidate_sents = []
@@ -136,24 +129,18 @@ def verbMatching(story, question): # FOR VERBED QUESTIONS
             #left = [t.text for t in sent[idx].lefts]
             #right = [t.text for t in sent[idx].rights]
             #candidate_phrase.append(' '.join(left) +  ' '.join(right))
-            target.score += 1
+            target.score += 3
             candidate_phrase.append(sent.text)
-    if len(candidate_phrase) == 0:
-        return ''
-    return candidate_phrase[0]
 
 
 def nounMatching(story, question):
     candidates = set()
     for comp in story.targets: 
-        ner_overlap = computeOverlap(comp.ner,question.target.ner)
-        noun_overlap = computeOverlap(comp.nouns,question.target.nouns)
+        #ner_overlap = computeOverlap(comp.ner,question.target.ner)
+        #noun_overlap = computeOverlap(comp.nouns,question.target.nouns)
         np_overlap = computeOverlap(comp.noun_phrase, question.target.noun_phrase)
-        comp.score += ner_overlap + np_overlap + noun_overlap
+        comp.score +=  np_overlap #+ noun_overlap + ner_overlap 
         candidates.add(comp)
-    if len(candidates) == 0:
-        return ''
-    return max(candidates, key=lambda k:k.score).sent
 
 
 def computeOverlap(s1,s2):

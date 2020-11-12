@@ -53,7 +53,7 @@ class qa:
         self.target = composition(self.dep_parse)
 
 
-class story:
+class Story:
     def __init__(self, title, ID, date, corpus):
         self.title = title
         self.ID = ID
@@ -90,8 +90,8 @@ class composition:
             if verb_re.search(t.pos_): 
                 self.verbs.add(t.lemma_)    #word was hyphenated and cant be found
                 r = root_re(t.lemma_).search(t.text)
-                if r:
-                    self.no_lem_verb[t.lemma_] = punc_re.findall(self.sent).index(r.group(0))
+                #if r:
+                    #self.no_lem_verb[t.lemma_] = punc_re.findall(self.sent).index(r.group(0))
             elif noun_re.search(t.pos_):
                 self.nouns.add(t.lemma_)
             elif adj_re.search(t.pos_):
@@ -121,7 +121,7 @@ def verbMatching(story, question): # FOR VERBED QUESTIONS
     for target, verb in candidate_sents:
         if verb in target.no_lem_verb.keys():
             #weird indexing mapping to get the correct dependency parse
-            idx = target.no_lem_verb[verb]
+            #idx = target.no_lem_verb[verb]
             sent_idx = story.targets.index(target)
             sent = story.dep_parse[sent_idx] 
             # TODO Extracts phrase based on dependencies
@@ -181,8 +181,7 @@ def extractStory(_path):
     ID = input_data[2].replace("STORYID: ", "")
     index = input_data.index("TEXT:\n") + 2 # marker of text start
     corpus = " ".join([line.strip('\n') for line in input_data[index:]])
-    story_ = story(title, ID, date, corpus)
-    return story_
+    return Story(title, ID, date, corpus)
 
 
 def extractQuestions(_path):

@@ -104,7 +104,10 @@ class composition:
 def getAnswer(story,question):
     verbMatching(story,question)
     nounMatching(story,question)
-    return max(story.targets, key=lambda k:k.score).sent #highest scoring sentence
+    top = max(story.targets, key=lambda k:k.score) 
+    if top.score < 4: #not enough for a match
+        return ''
+    return top.sent #highest scoring sentence
 
 
 def verbMatching(story, question): # FOR VERBED QUESTIONS
@@ -136,10 +139,10 @@ def verbMatching(story, question): # FOR VERBED QUESTIONS
 def nounMatching(story, question):
     candidates = set()
     for comp in story.targets: 
-        #ner_overlap = computeOverlap(comp.ner,question.target.ner)
+        ner_overlap = computeOverlap(comp.ner,question.target.ner)
         #noun_overlap = computeOverlap(comp.nouns,question.target.nouns)
         np_overlap = computeOverlap(comp.noun_phrase, question.target.noun_phrase)
-        comp.score +=  np_overlap #+ noun_overlap + ner_overlap 
+        comp.score +=  np_overlap + ner_overlap #+ noun_overlap 
         candidates.add(comp)
 
 

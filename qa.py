@@ -76,26 +76,14 @@ class composition:
         self.no_lem_verb = dict()
         self.noun_phrase = {t.text for t in sent.noun_chunks}
         self.verbs = set()
-        self.adj = set()
         self.score = 0
         for t in sent:
             if question_word.search(t.lemma_):
                 self.q_tag = t.lemma_
-            if subj_re.search(t.dep_):
-                self.subj = t.lemma_
-            if dobj_re.search(t.dep_):
-                self.dobj = t.lemma_
-            elif idobj_re.search(t.dep_):
-                self.idobj = t.lemma_
             if verb_re.search(t.pos_): 
-                self.verbs.add(t.lemma_)    #word was hyphenated and cant be found
-                r = root_re(t.lemma_).search(t.text)
-                #if r:
-                    #self.no_lem_verb[t.lemma_] = punc_re.findall(self.sent).index(r.group(0))
+                self.verbs.add(t.lemma_)
             elif noun_re.search(t.pos_):
                 self.nouns.add(t.lemma_)
-            elif adj_re.search(t.pos_):
-                self.adj.add(t.lemma_)
 
 
 """ 
@@ -107,10 +95,14 @@ def getAnswer(story,question):
     top = max(story.targets, key=lambda k:k.score) 
     if top.score < 4: #not enough for a match
         return ''
-    return top.sent #highest scoring sentence
+    return top.sent
+    #return substringExtraction(top,question) # highest scoring sentence
 
 
-def verbMatching(story, question): # FOR VERBED QUESTIONS
+def verbMatching(story, question): 
+    """ Gets all verbs synonyms and hypernyms from the question and story. 
+        Compares them against each other to determine the overlap. Adds +3 to the 
+        score of a senetence for each of the occurrence."""
     candidate_sents = []
     for target in story.targets:
         syns_v, hyper_v = getSynsetsAndHypernyms(target.verbs, wn.VERB)
@@ -123,20 +115,15 @@ def verbMatching(story, question): # FOR VERBED QUESTIONS
     candidate_phrase = []
     for target, verb in candidate_sents:
         if verb in target.no_lem_verb.keys():
-            #weird indexing mapping to get the correct dependency parse
-            #idx = target.no_lem_verb[verb]
             sent_idx = story.targets.index(target)
             sent = story.dep_parse[sent_idx] 
-            # TODO Extracts phrase based on dependencies
-            # Currently not traveling far enough. need a NP conditional stop
-            #left = [t.text for t in sent[idx].lefts]
-            #right = [t.text for t in sent[idx].rights]
-            #candidate_phrase.append(' '.join(left) +  ' '.join(right))
             target.score += 3
             candidate_phrase.append(sent.text)
 
 
 def nounMatching(story, question):
+    """ Computes the overlap of of the NER phrases and NP that appear in 
+        the story and the question"""
     candidates = set()
     for comp in story.targets: 
         ner_overlap = computeOverlap(comp.ner,question.target.ner)
@@ -153,7 +140,7 @@ def computeOverlap(s1,s2):
 
 
 def getSynsetsAndHypernyms(words, pos_):
-    """ Uses WordNet to gather the synonyms-len(3) and hypernyms-len(9)"""
+    """ Uses WordNet to gather the synonyms and hypernyms"""
     synonyms = words.copy()
     hypernyms = set()
     counter = 0 # limit synonyms and hypernyms
@@ -172,6 +159,31 @@ def getSynsetsAndHypernyms(words, pos_):
                             hypernyms.add(xxxs.name().split('.')[0])
             counter += 1
     return synonyms, hypernyms
+
+
+def substringExtraction(sentence, q):
+    """Find the substring with the highest overlap to determine the most
+        likely answer boundary"""
+    subs = []
+    split_sent = sentence.sent.split()
+    for np in sentence.noun_phrase:
+        phrase_arr = np.split()
+        start = 0
+        for i in range(len(split_sent)): # needed loop to handle punctuation
+            if split_sent[i].find(phrase_arr[0]) !=- 1:
+                start = i
+                break
+        subs.append(split_sent[start-4:start+len(phrase_arr)+6])
+    candidate = ('',0)
+    split_q = set(q.question.split())
+    for s in subs:
+        set_s = set(s)
+        sub_score = len(set_s.intersection(split_q))
+        if sub_score > candidate[1]:
+            candidate = (s, sub_score)
+    if candidate[1] == 0:
+        return sentence.sent
+    return ' '.join(candidate[0])
 
 
 def extractStory(_path):

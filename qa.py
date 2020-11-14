@@ -3,6 +3,7 @@ import sys
 import nltk 
 from nltk.corpus import wordnet as wn
 import re
+import random as rand
 
 """ 
 -------- Global Definitions and Setup/Downloads -------- 
@@ -33,11 +34,15 @@ subj_re = re.compile(r'[a-z]*subj[a-z]*')
 dobj_re = re.compile(r'[a-z]*dobj[a-z]*')
 idobj_re = re.compile(r'[a-z]*pdobj[a-z]*')
 noun_re = re.compile(r'PROPN | PRON | NOUN | NUM')  #Nouns and Nums together for simplicity
-verb_re = re.compile(r'VERB') # TODO add AUX or make own with questions words?
+verb_re = re.compile(r'VERB') 
+#aux_re = re.compile(r'AUX')
 adj_re = re.compile(r'ADJ')
 root_re = lambda k: re.compile(r'[a-z]*{}[a-z]*'.format(k))
 punc_re = re.compile(r"[\w']+|[.,!?;]") # findall to match dep_parse indexing on tokens
 question_word = re.compile(r'(?i)who|what|when|where|how|why')
+
+# Mappings to question functions
+qFunctionMap = dict()
 
 
 """ 
@@ -95,8 +100,9 @@ def getAnswer(story,question):
     top = max(story.targets, key=lambda k:k.score) 
     if top.score < 4: #not enough for a match
         return ''
-    return top.sent
+    #return top.sent
     #return substringExtraction(top,question) # highest scoring sentence
+    return verbDepExtraction(top.sent,question)
 
 
 def verbMatching(story, question): 
@@ -161,9 +167,48 @@ def getSynsetsAndHypernyms(words, pos_):
     return synonyms, hypernyms
 
 
+# Add case for no verbs, and have AUX and nouns extracted(EX: who is the principal?)
+def verbDepExtraction(sentence, q):
+    """ Extract the substring related to the subdependency parse of the verb. 
+    Requires that the most likely sentence is passed in as a composition object"""
+    sub_trees = []
+    for word in dependency_parser(sentence): #extract the subtrees
+        if word.dep_ in ('xcomp', 'ccomp'):
+            sub_trees.append(''.join(w.text_with_ws for w in word.subtree))
+    #q_word = question_word.search(q.question).group(0) # TODO: put error check on this
+    #sub_phrase = qFunctionMap[q_word](comp, q) # TODO: mabye move to sooner in algorithm
+    #return sub_phrase
+    if len(sub_trees) == 0:
+        return sentence
+    return sub_trees[rand.randint(0,len(sub_trees)-1)]
+
+
+def qWho(trees,q):
+    pass
+def qWhat(trees,q):
+    pass
+def qWhere(trees,q):
+    pass
+def qWhen(trees,q):
+    pass
+def qHow(trees,q):
+    pass
+def qWhy(trees,q):
+    pass
+
+# Assignment of mapping
+qFunctionMap = {
+    'who': qWho,
+    'what' : qWhat,
+    'where' : qWhere,
+    'when' : qWhen,
+    'how' : qHow,
+    'why' : qWhy
+}
+
 def substringExtraction(sentence, q):
     """Find the substring with the highest overlap to determine the most
-        likely answer boundary"""
+        likely answer boundary. Based on NPs"""
     subs = []
     split_sent = sentence.sent.split()
     for np in sentence.noun_phrase:
@@ -173,7 +218,7 @@ def substringExtraction(sentence, q):
             if split_sent[i].find(phrase_arr[0]) !=- 1:
                 start = i
                 break
-        subs.append(split_sent[start-4:start+len(phrase_arr)+6])
+        subs.append(split_sent[start-6:start+len(phrase_arr)+6])
     candidate = ('',0)
     split_q = set(q.question.split())
     for s in subs:

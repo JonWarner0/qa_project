@@ -98,7 +98,7 @@ def getAnswer(story,question):
     verbMatching(story,question)
     nounMatching(story,question)
     top = max(story.targets, key=lambda k:k.score) 
-    if top.score < 4: #not enough for a match
+    if top.score < 3: #not enough for a match
         return ''
     #return top.sent
     #return substringExtraction(top,question) # highest scoring sentence
@@ -109,7 +109,6 @@ def verbMatching(story, question):
     """ Gets all verbs synonyms and hypernyms from the question and story. 
         Compares them against each other to determine the overlap. Adds +3 to the 
         score of a senetence for each of the occurrence."""
-    candidate_sents = []
     for target in story.targets:
         syns_v, hyper_v = getSynsetsAndHypernyms(target.verbs, wn.VERB)
         s = syns_v.union(hyper_v)
@@ -117,26 +116,17 @@ def verbMatching(story, question):
             syns_q_v, hyper_q_v = getSynsetsAndHypernyms(question.target.verbs, wn.VERB)
             q = syns_q_v.union(hyper_q_v)
             if v in q: 
-                candidate_sents.append((target, v))
-    candidate_phrase = []
-    for target, verb in candidate_sents:
-        if verb in target.no_lem_verb.keys():
-            sent_idx = story.targets.index(target)
-            sent = story.dep_parse[sent_idx] 
-            target.score += 3
-            candidate_phrase.append(sent.text)
+                target.score += 3
 
 
 def nounMatching(story, question):
     """ Computes the overlap of of the NER phrases and NP that appear in 
         the story and the question"""
-    candidates = set()
     for comp in story.targets: 
         ner_overlap = computeOverlap(comp.ner,question.target.ner)
-        #noun_overlap = computeOverlap(comp.nouns,question.target.nouns)
+        noun_overlap = computeOverlap(comp.nouns,question.target.nouns)
         np_overlap = computeOverlap(comp.noun_phrase, question.target.noun_phrase)
-        comp.score +=  np_overlap + ner_overlap #+ noun_overlap 
-        candidates.add(comp)
+        comp.score +=  np_overlap + ner_overlap + noun_overlap 
 
 
 def computeOverlap(s1,s2):
@@ -167,7 +157,6 @@ def getSynsetsAndHypernyms(words, pos_):
     return synonyms, hypernyms
 
 
-# Add case for no verbs, and have AUX and nouns extracted(EX: who is the principal?)
 def verbDepExtraction(sentence, q):
     """ Extract the substring related to the subdependency parse of the verb. 
     Requires that the most likely sentence is passed in as a composition object"""
@@ -175,28 +164,49 @@ def verbDepExtraction(sentence, q):
     for word in dependency_parser(sentence): #extract the subtrees
         if word.dep_ in ('xcomp', 'ccomp'):
             sub_trees.append(''.join(w.text_with_ws for w in word.subtree))
-    #q_word = question_word.search(q.question).group(0) # TODO: put error check on this
-    #sub_phrase = qFunctionMap[q_word](comp, q) # TODO: mabye move to sooner in algorithm
-    #return sub_phrase
     if len(sub_trees) == 0:
         return sentence
-    return sub_trees[rand.randint(0,len(sub_trees)-1)]
+    elif len(sub_trees) == 1:
+        return sub_trees[0]
+    q_type =  question_word.search(q.question)
+    if q_type:
+        q_word = q_type.group(0).lower() 
+        sub_phrase = qFunctionMap[q_word](sub_trees, q) 
+        return sub_phrase
+    else:
+        return sentence # unable to match question type
 
 
 def qWho(trees,q):
-    pass
-def qWhat(trees,q):
-    pass
-def qWhere(trees,q):
-    pass
-def qWhen(trees,q):
-    pass
-def qHow(trees,q):
-    pass
-def qWhy(trees,q):
-    pass
+    stem_q = {d.lemma_ for d in q.dep_parse}
+    best = []
+    for t in trees:
+        parse = dependency_parser(t)
+        for p in parse.ents:
+            if p.lemma_ in stem_q: #inverted overlap -> Q won't contain answer
+                break
+            else:
+                best.append(t)
+    if len(best) == 0:
+        return ''.join(trees) # none can be rated higher so return who sentence
+    return best[rand.randint(0,len(best)-1)] #all could be the answer. Make a guess
 
-# Assignment of mapping
+def qWhat(trees,q):
+    return trees[rand.randint(0,len(trees)-1)]
+
+def qWhere(trees,q):
+    return trees[rand.randint(0,len(trees)-1)]
+
+def qWhen(trees,q):
+    return trees[rand.randint(0,len(trees)-1)]
+
+def qHow(trees,q):
+    return trees[rand.randint(0,len(trees)-1)]
+
+def qWhy(trees,q):
+    return trees[rand.randint(0,len(trees)-1)]
+
+# --- Assignment of mapping ---- 
 qFunctionMap = {
     'who': qWho,
     'what' : qWhat,
@@ -205,6 +215,7 @@ qFunctionMap = {
     'how' : qHow,
     'why' : qWhy
 }
+
 
 def substringExtraction(sentence, q):
     """Find the substring with the highest overlap to determine the most

@@ -30,15 +30,9 @@ except Exception:
 
 
 # regex extracting tags
-subj_re = re.compile(r'[a-z]*subj[a-z]*')
-dobj_re = re.compile(r'[a-z]*dobj[a-z]*')
-idobj_re = re.compile(r'[a-z]*pdobj[a-z]*')
 noun_re = re.compile(r'PROPN | PRON | NOUN | NUM')  #Nouns and Nums together for simplicity
 verb_re = re.compile(r'VERB') 
-#aux_re = re.compile(r'AUX')
-adj_re = re.compile(r'ADJ')
-root_re = lambda k: re.compile(r'[a-z]*{}[a-z]*'.format(k))
-punc_re = re.compile(r"[\w']+|[.,!?;]") # findall to match dep_parse indexing on tokens
+punc_re = re.compile(r"[\w']+|[.,!?;]") # use findall 
 question_word = re.compile(r'(?i)who|what|when|where|how|why')
 
 # Mappings to question functions
@@ -78,7 +72,6 @@ class composition:
         self.sent = sent.text[:-1]
         self.ner = {t.text for t in sent.ents} #add .label_ for ORG, etc..
         self.nouns = set()
-        self.no_lem_verb = dict()
         self.noun_phrase = {t.text for t in sent.noun_chunks}
         self.verbs = set()
         self.score = 0
@@ -98,11 +91,9 @@ def getAnswer(story,question):
     verbMatching(story,question)
     nounMatching(story,question)
     top = max(story.targets, key=lambda k:k.score) 
-    if top.score < 3: #not enough for a match
-        return ''
-    #return top.sent
-    #return substringExtraction(top,question) # highest scoring sentence
-    return verbDepExtraction(top.sent,question)
+    if top.score < 4: # Did not score high enough to be a likely answer 
+        return ''       # threshold = 4 -> highest avg recall by 10% and same percision as others
+    return verbDepExtraction(top,question)
 
 
 def verbMatching(story, question): 
@@ -157,24 +148,25 @@ def getSynsetsAndHypernyms(words, pos_):
     return synonyms, hypernyms
 
 
-def verbDepExtraction(sentence, q):
+def verbDepExtraction(comp, q):
     """ Extract the substring related to the subdependency parse of the verb. 
-    Requires that the most likely sentence is passed in as a composition object"""
+    Requires that the most likely sentence is passed in as composition object"""
     sub_trees = []
-    for word in dependency_parser(sentence): #extract the subtrees
+    for word in dependency_parser(comp.sent): #extract the subtrees based on verbs
+        # Prep improved percision but dropped recall
         if word.dep_ in ('xcomp', 'ccomp'):
             sub_trees.append(''.join(w.text_with_ws for w in word.subtree))
-    if len(sub_trees) == 0:
-        return sentence
-    elif len(sub_trees) == 1:
+    if len(sub_trees) == 0: # no verb candidate to make smaller
+        return exctractPrep(comp,q)#comp.sent#npExtraction(comp,q) #Np extract lowers percision
+    elif len(sub_trees) == 1: # only one option
         return sub_trees[0]
     q_type =  question_word.search(q.question)
-    if q_type:
+    if q_type: # determine most likely based on the question word
         q_word = q_type.group(0).lower() 
         sub_phrase = qFunctionMap[q_word](sub_trees, q) 
         return sub_phrase
     else:
-        return sentence # unable to match question type
+        return comp.sent # unable to match question type
 
 
 def qWho(trees,q):
@@ -183,14 +175,16 @@ def qWho(trees,q):
     for t in trees:
         parse = dependency_parser(t)
         for p in parse.ents:
-            if p.lemma_ in stem_q: #inverted overlap -> Q won't contain answer
+            if p.lemma_ in stem_q: #inverted overlap -> the question won't contain answer
                 break
             else:
                 best.append(t)
     if len(best) == 0:
         return ''.join(trees) # none can be rated higher so return who sentence
-    return best[rand.randint(0,len(best)-1)] #all could be the answer. Make a guess
+    return best[rand.randint(0,len(best)-1)] #any could be the answer. Make a guess
 
+
+#TODO: fill these out to constrain the randomness
 def qWhat(trees,q):
     return trees[rand.randint(0,len(trees)-1)]
 
@@ -216,8 +210,31 @@ qFunctionMap = {
     'why' : qWhy
 }
 
+# Good balance between recall(raised 9%) and percision(dropped 18%)
+# TODO: raise percision back up
+def exctractPrep(comp,q):
+    sub_trees = []
+    for word in dependency_parser(comp.sent): 
+        if word.dep_ in ('prep'):
+            sub_trees.append(''.join(w.text_with_ws for w in word.subtree))
+    stem_q = {d.lemma_ for d in q.dep_parse}
+    best = []
+    for t in sub_trees:
+        parse = dependency_parser(t)
+        for p in parse.ents:
+            if p.lemma_ in stem_q: #inverted overlap -> the question won't contain answer
+                break
+            else:
+                best.append(t)
+    if len(best) == 0:
+        return ''.join(sub_trees) # none can be rated higher so return who sentence
+    return best[rand.randint(0,len(best)-1)] #any could be the answer. Make a guess
 
-def substringExtraction(sentence, q):
+
+# Assumption that the answer relating to the NP in the question, is near the NP in the sentence
+# Strip off words that are not likely to relate to the answer to increase percision
+#FIXME: recall is dropping. Find better IE procedure
+def npExtraction(sentence, q):
     """Find the substring with the highest overlap to determine the most
         likely answer boundary. Based on NPs"""
     subs = []
@@ -226,9 +243,9 @@ def substringExtraction(sentence, q):
         phrase_arr = np.split()
         start = 0
         for i in range(len(split_sent)): # needed loop to handle punctuation
-            if split_sent[i].find(phrase_arr[0]) !=- 1:
+            if split_sent[i].find(phrase_arr[0]) != -1:
                 start = i
-                break
+                break      
         subs.append(split_sent[start-6:start+len(phrase_arr)+6])
     candidate = ('',0)
     split_q = set(q.question.split())
@@ -237,7 +254,7 @@ def substringExtraction(sentence, q):
         sub_score = len(set_s.intersection(split_q))
         if sub_score > candidate[1]:
             candidate = (s, sub_score)
-    if candidate[1] == 0:
+    if candidate[1] == 0: # unsuccessful search
         return sentence.sent
     return ' '.join(candidate[0])
 

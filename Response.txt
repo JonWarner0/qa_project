@@ -1,23 +1,23 @@
 QuestionID: 1999-W07-5-1
-Answer: after a sleepless night 
+Answer: when he got the word the boys were safe and sound
 
 QuestionID: 1999-W07-5-2
 Answer: 
 
 QuestionID: 1999-W07-5-4
-Answer: to regain their way
+Answer: "When we were hiking back and it was starting to get dark, we realized '
 
 QuestionID: 1999-W07-5-5
-Answer: into a snowbankin case a helicopter flew over
+Answer: Shivering, hungry, lost on a mountain in blizzard conditions
 
 QuestionID: 1999-W07-5-6
-Answer: into a snowbankin case a helicopter flew over
+Answer: after four hours of post-holing uphill through snow up to their waists
 
 QuestionID: 1999-W07-5-7
 Answer: that the search parties were called in and 
 
 QuestionID: 1999-W07-5-8
-Answer: After a restto the cross-country ski trail where they were found by a party of snowmobilersof snowmobilers
+Answer: backwoods savvy and faith in themselves 
 
 QuestionID: 1999-W07-5-12
 Answer: 
@@ -26,31 +26,31 @@ QuestionID: 1999-W08-1-1
 Answer: 
 
 QuestionID: 1999-W08-1-2
-Answer: -50 on the charge of obstruction of justiceof obstruction of justiceof justiceon the charge of perjuryof perjury
+Answer: only 45 voted Clinton "guilty" on the charge of perjury
 
 QuestionID: 1999-W08-1-3
-Answer: others to lie in court
+Answer: of obstructing justice (hiding evidence, or getting others to lie in court
 
 QuestionID: 1999-W08-1-4
-Answer: that he did have a relationship with her
+Answer: having an affair with White House intern, Monica Lewinsky
 
 QuestionID: 1999-W08-1-5
-Answer: Clinton tried to get Lewinsky to lieto get Lewinsky to lieLewinsky to lieit was her own decision to cover up the affair
+Answer: she says it was her own decision to cover up the affair
 
 QuestionID: 1999-W08-1-7
-Answer: of the American president 
+Answer: when he was found not guilty of both charges against him
 
 QuestionID: 1999-W08-5-2
-Answer: as  three metres  through clouds and darkness
+Answer: objects as small as  three metres through clouds and darkness
 
 QuestionID: 1999-W08-5-4
-Answer: according to NASAto NASA 
+Answer: according to NASA
 
 QuestionID: 1999-W08-5-5
 Answer: 
 
 QuestionID: 1999-W08-5-6
-Answer: Anything below five metres causes concern to the U.S. intelligence community
+Answer: of strategic development for the Canadian Space  Agency
 
 QuestionID: 1999-W09-5-1
 Answer: learning the traditional ways will help the prisoners' rehabilitation
@@ -59,13 +59,13 @@ QuestionID: 1999-W09-5-2
 Answer: 
 
 QuestionID: 1999-W09-5-3
-Answer: 
+Answer: it's money well spent
 
 QuestionID: 1999-W09-5-5
-Answer: of dollars for equipment, clothing and supervision
+Answer: costing tens of thousands of dollars for equipment, clothing and supervision
 
 QuestionID: 1999-W09-5-6
-Answer: from the city on the frozen tundraon the frozen tundra
+Answer: In the summer 
 
 QuestionID: 1999-W09-5-7
 Answer: 
@@ -77,40 +77,40 @@ QuestionID: 1999-W20-4-2
 Answer: to beg on a patch of downtown Ottawa sidewalk, wedged between a bank and a grocery store
 
 QuestionID: 1999-W20-4-4
-Answer: begging laws 
+Answer: an individual has challenged begging laws in court
 
 QuestionID: 1999-W20-4-6
 Answer: 
 
 QuestionID: 1999-W20-4-7
-Answer: 
+Answer: Even though these freedoms are very important
 
 QuestionID: 1999-W26-1-1
-Answer: with the Kosovo Liberation Army (KLA), a group of Yugoslavians of Albanian heritage who were fighting against the Yugoslavian army
+Answer: a peace deal with the Kosovo Liberation Army (KLA), a group of Yugoslavians of Albanian heritage who were fighting against the Yugoslavian army
 
 QuestionID: 1999-W26-1-2
-Answer: in countries around the world, including Canada
+Answer: a peace deal with the Kosovo Liberation Army (KLA), a group of Yugoslavians of Albanian heritage who were fighting against the Yugoslavian army
 
 QuestionID: 1999-W26-1-3
 Answer: to live together in peace
 
 QuestionID: 1999-W26-1-6
-Answer: of Yugolsavians of Serbian heritage 
+Answer: with a plan to rebuild the region and make sure that a lasting peace can be maintained
 
 QuestionID: 1999-W26-1-7
-Answer: what NATO destroyed in Yugoslavia
+Answer: to rebuild what NATO destroyed in Yugoslavia
 
 QuestionID: 1999-W26-1-9
-Answer: of Albanian heritage 
+Answer: of the world's eight leading industrialized countries, known as the Group of Eight or the G8, 
 
 QuestionID: 1999-W27-3-1
-Answer: from her first album
+Answer: for song writing credit and a share of money from her first album
 
 QuestionID: 1999-W27-3-2
-Answer: to wrap up today 
+Answer: in the industry and certainly in the law
 
 QuestionID: 1999-W27-3-4
-Answer: he co-wrote four of those songs, including Sad Clown
+Answer: to sort it all out
 
 QuestionID: 1999-W27-3-5
 Answer: Mr. Neudorf is given credit for pre-production, coordination and production assistance
@@ -119,94 +119,94 @@ QuestionID: 1999-W27-3-6
 Answer: What is the act of authorship
 
 QuestionID: 1999-W27-3-8
-Answer: in the United Kingdom
+Answer: is based largely on the law in the United Kingdom
 
 QuestionID: 1999-W27-3-9
-Answer: to wrap up today 
+Answer: because of the complexity of the case, it may be months before a decision is made
 
 QuestionID: 1999-W27-3-10
-Answer: to a question of his word against hersof his word against hersagainst hers
+Answer: is based largely on the law in the United Kingdom
 
 QuestionID: 1999-W28-1-1
 Answer: 
 
 QuestionID: 1999-W28-1-2
-Answer: in Saskatoon
+Answer: The 13-year-old from Martensville
 
 QuestionID: 1999-W28-1-3
 Answer: raise money to pay for Tyrell's treatment in Mexico
 
 QuestionID: 1999-W28-1-4
-Answer: to Mexico 
+Answer: for the alternative treatment
 
 QuestionID: 1999-W28-1-5
-Answer: in Tyrell's case, government interference meant alternative treatment may have been delayed too long
+Answer: as his case went through the courts
 
 QuestionID: 1999-W28-1-6
-Answer: in Tyrell's case, government interference meant alternative treatment may have been delayed too long
+Answer: When it was discovered the cancer had spread to Tyrell's lungs
 
 QuestionID: 1999-W28-1-7
-Answer: he was cancer-free
+Answer: in Tyrell's case, government interference meant alternative treatment may have been delayed too long
 
 QuestionID: 1999-W28-1-8
-Answer: alternative medicine would work
+Answer: raise money to pay for Tyrell's treatment in Mexico
 
 QuestionID: 1999-W29-4-1
-Answer: removed
+Answer: the left side of her brain 
 
 QuestionID: 1999-W29-4-2
 Answer: 
 
 QuestionID: 1999-W29-4-3
-Answer: of brain disease that can occur at any time in childhoodat any time in childhoodin childhood
+Answer: of brain disease that can occur at any time in childhood
 
 QuestionID: 1999-W29-4-4
-Answer: of brain disease that can occur at any time in childhoodat any time in childhoodin childhood
+Answer: of brain disease that can occur at any time in childhood
 
 QuestionID: 1999-W29-4-5
-Answer: to
+Answer: only about 1,000 people around the world
 
 QuestionID: 1999-W29-4-6
-Answer: around the world
+Answer: only about 1,000 people around the world
 
 QuestionID: 1999-W29-4-7
-Answer: from her whole life
+Answer: the surgery to control a disease she has suffered from her whole life
 
 QuestionID: 1999-W29-4-8
-Answer: to control with medication
+Answer: are difficult to control with medication
 
 QuestionID: 1999-W31-1-1
 Answer: 
 
 QuestionID: 1999-W31-1-2
-Answer: in Ontario about a foreign fish called the round goby
+Answer: about a foreign fish called the round goby
 
 QuestionID: 1999-W31-1-3
-Answer: to feed right through the night
+Answer: the eggs and young of the sport fish 
 
 QuestionID: 1999-W31-1-4
-Answer: 
+Answer: because it has special sensors
 
 QuestionID: 1999-W31-1-5
-Answer: in the lake
+Answer: likely in water held in the bottom of a boat
 
 QuestionID: 1999-W31-1-6
-Answer: that all they can catch are goby
+Answer: the round goby makes life miserable for fishers too, because they steal bait and will also hit lures
 
 QuestionID: 1999-W31-1-7
 Answer: these measures will keep the round goby from taking over the waterways of central Canada
 
 QuestionID: 1999-W31-3-1
-Answer: 
+Answer: both the Liberal Party government led by Premier Russell MacLellan and Robert Chisholm's New Democratic Party
 
 QuestionID: 1999-W31-3-2
-Answer: 
+Answer: both the Liberal Party government led by Premier Russell MacLellan and Robert Chisholm's New Democratic Party
 
 QuestionID: 1999-W31-3-3
-Answer: 
+Answer: 29 seatsthe New Democrats 12 and the Liberals 11
 
 QuestionID: 1999-W31-3-4
-Answer: the legislature has lost confidence in them
+Answer: that no one party had more than half the seats in the legislature
 
 QuestionID: 1999-W31-3-5
 Answer: in the last election
@@ -215,22 +215,22 @@ QuestionID: 1999-W31-3-6
 Answer: to cut people's taxes within three years
 
 QuestionID: 1999-W31-3-7
-Answer: to call a new election
+Answer: to call the election after the other parties voted against his budget
 
 QuestionID: 1999-W31-3-8
-Answer: the legislature has lost confidence in them
+Answer: that no one party had more than half the seats in the legislature
 
 QuestionID: 1999-W31-3-9
 Answer: the premier must either quit, or call a new election
 
 QuestionID: 1999-W31-5-1
-Answer: to the moon
+Answer: his lifelong wish to go to the moon
 
 QuestionID: 1999-W31-5-2
 Answer: on several U.S. space missions, including the Apollo missions to the moon
 
 QuestionID: 1999-W31-5-3
-Answer: the biggest disappointment in his life was "not going to the moon and banging on it with my own hammer
+Answer: to crash land on the moon early Saturday morning
 
 QuestionID: 1999-W31-5-4
 Answer: that the impact of Prospector's crash into the moon will create a plume of water which will be visible from Earth with a telescope
@@ -239,19 +239,19 @@ QuestionID: 1999-W31-5-5
 Answer: on craters and the collisions that cause them
 
 QuestionID: 1999-W31-5-6
-Answer: 
+Answer: with discovering about 20 comets and 800 asteroids
 
 QuestionID: 1999-W31-5-7
-Answer: discover the comet Shoemaker-Levy 9
+Answer: with discovering about 20 comets and 800 asteroids
 
 QuestionID: 1999-W31-5-8
 Answer: 
 
 QuestionID: 1999-W31-5-9
-Answer: about craters
+Answer: Apollo astronauts about craters
 
 QuestionID: 1999-W31-5-10
-Answer: including the Apollo missions to the moon
+Answer: was rejected because of a medical problem
 
 QuestionID: 1999-W31-5-11
 Answer: the biggest disappointment in his life was "not going to the moon and banging on it with my own hammer
@@ -263,7 +263,7 @@ QuestionID: 1999-W32-4-2
 Answer: with five robots on each team
 
 QuestionID: 1999-W32-4-3
-Answer: robots play soccer against each other
+Answer: with five robots on each team
 
 QuestionID: 1999-W32-4-4
 Answer: these soccer games help us learn how to improve the building of robots
@@ -275,10 +275,10 @@ QuestionID: 1999-W32-4-6
 Answer: the idea was not as far-fetched as it may sound since IBM's Deep Blue supercomputer beat chess champion Garry Kasparov
 
 QuestionID: 1999-W32-4-8
-Answer: in Sweden
+Answer: At the third annual Robot World Cup Soccer tournament in Sweden
 
 QuestionID: 1999-W32-4-9
-Answer: to be competing in the 2002 tournament
+Answer: to have robots competing against humans by the year 2050
 
 QuestionID: 1999-W32-4-11
 Answer: in Australia 
@@ -287,13 +287,13 @@ QuestionID: 1999-W32-5-1
 Answer: across part of the Trans-Canada highway
 
 QuestionID: 1999-W32-5-2
-Answer: 
+Answer: the slides
 
 QuestionID: 1999-W32-5-3
 Answer: one metre deep in some areas of the road
 
 QuestionID: 1999-W32-5-4
-Answer: one metre deep in some areas of the road
+Answer: across part of the Trans-Canada highway
 
 QuestionID: 1999-W32-5-5
 Answer: to re-open the parts of the highway
@@ -305,25 +305,25 @@ QuestionID: 1999-W32-5-7
 Answer: in steep and mountainous areas
 
 QuestionID: 1999-W32-5-8
-Answer: 
+Answer: the slides
 
 QuestionID: 1999-W32-5-10
-Answer: 
+Answer: Once a slope is weakened
 
 QuestionID: 1999-W33-3-1
-Answer: on Wednesday
+Answer: of the millennium 
 
 QuestionID: 1999-W33-3-2
-Answer: what they were doing to take a glance at history
+Answer: that it was a total eclipse, where the moon totally blocks the sun
 
 QuestionID: 1999-W33-3-3
-Answer: in the Atlantic
+Answer: of the moon's shadow 
 
 QuestionID: 1999-W33-3-4
-Answer: this eclipse special 
+Answer: that it was a total eclipse, where the moon totally blocks the sun
 
 QuestionID: 1999-W33-3-5
-Answer: in one year 
+Answer: of eclipses 
 
 QuestionID: 1999-W33-3-6
 Answer: 
@@ -332,28 +332,28 @@ QuestionID: 1999-W33-3-7
 Answer: 
 
 QuestionID: 1999-W33-3-8
-Answer: In twenty five years 
+Answer: only about an hour of total eclipses
 
 QuestionID: 1999-W33-3-9
-Answer: in Eastern Canada
+Answer: that it was a total eclipse, where the moon totally blocks the sun
 
 QuestionID: 1999-W33-3-10
 Answer: 
 
 QuestionID: 1999-W33-5-2
-Answer: the federal and provincial governments to help clean up the harbourclean up the harbour
+Answer: the federal and provincial governments to help clean up the harbour
 
 QuestionID: 1999-W33-5-3
-Answer: 
+Answer: the federal and provincial governments to pay half the cost of cleaning up Lunenburg Harbour
 
 QuestionID: 1999-W33-5-4
 Answer: Lunenburg is a special case because of 
 
 QuestionID: 1999-W33-5-5
-Answer: between US and Canadian fishing schooners
+Answer: as a friendly competition between US and Canadian fishing schooners
 
 QuestionID: 1999-W33-5-6
-Answer: 
+Answer: the race 
 
 QuestionID: 1999-W33-5-7
 Answer: 
@@ -362,31 +362,31 @@ QuestionID: 1999-W33-5-8
 Answer: Lunenburg is a special case because of 
 
 QuestionID: 1999-W33-5-9
-Answer: for being the home of the Bluenose and the Bluenose IIof the Bluenose and the Bluenose II
+Answer: for being the home of the Bluenose and the Bluenose II
 
 QuestionID: 1999-W33-5-10
 Answer: the federal and provincial governments to pay half the cost of cleaning up Lunenburg Harbour
 
 QuestionID: 1999-W34-4-1
-Answer: of Istanbul, the country's capital
+Answer: Izmit, the region just south of Istanbul, the country's capital
 
 QuestionID: 1999-W34-4-2
 Answer: 
 
 QuestionID: 1999-W34-4-3
-Answer: of Istanbul, the country's capital
+Answer: of the earthquake 
 
 QuestionID: 1999-W34-4-4
-Answer: digging through the rubbleto save people trapped under concrete and metal
+Answer: digging through the rubble
 
 QuestionID: 1999-W34-4-5
-Answer: 
+Answer: more than 6,000 people
 
 QuestionID: 1999-W34-4-6
-Answer: As a resultof the earthquake victims on the streets
+Answer: of the earthquake victims 
 
 QuestionID: 1999-W34-4-7
-Answer: to the National Earthquake Information Centre in Colorado
+Answer: according to the National Earthquake Information Centre in Colorado
 
 QuestionID: 1999-W34-4-8
 Answer: 
@@ -395,79 +395,79 @@ QuestionID: 1999-W34-4-9
 Answer: 
 
 QuestionID: 1999-W34-4-11
-Answer: in communication 
+Answer: providing medical assistance
 
 QuestionID: 1999-W35-5-2
-Answer: Among the suggested habits with their children 
+Answer: that not all television is bad
 
 QuestionID: 1999-W35-5-3
-Answer: how much time children are sitting in front of electronic screens
+Answer: doctors to monitor how much time children are sitting in front of electronic screens
 
 QuestionID: 1999-W35-5-4
-Answer: At current Canadian rates
+Answer: parents to limit preschoolers to one hour of TV a day
 
 QuestionID: 1999-W35-5-5
-Answer: listening to actors than teachers
+Answer: more time watching TV than they did learning in a classroom
 
 QuestionID: 1999-W35-5-6
-Answer: watching television each week
+Answer: between watching television and an increase in violent behaviour
 
 QuestionID: 1999-W35-5-7
-Answer: televisions should be turned off during meal times
+Answer: that not all television is bad
 
 QuestionID: 1999-W35-5-9
 Answer: watching television each week
 
 QuestionID: 1999-W37-2-3
-Answer: in the Inuktitut language of Canada's Inuitof Canada's Inuit
+Answer: our land" in the Inuktitut language of Canada's Inuit
 
 QuestionID: 1999-W37-2-4
 Answer: on April 1
 
 QuestionID: 1999-W37-2-5
-Answer: on Sunday 
+Answer: accompanied by Canadian Prime Minister Jean Chretien
 
 QuestionID: 1999-W37-2-6
-Answer: of Inuit art on the Internet
+Answer: a community hall run by the Nunavut Francophone Association, where he opened a virtual museum of Inuit art on the Internet, a project financed by the French government
 
 QuestionID: 1999-W37-2-7
-Answer: of Iqaluit 
+Answer: this visit will help start a tourism industry.
 
 QuestionID: 1999-W37-2-9
-Answer: 
+Answer: to visit the territory
 
 QuestionID: 1999-W37-2-10
-Answer: of Inuit art 
+Answer: the impression he would leave the territory empty-handed
 
 QuestionID: 1999-W37-4-1
-Answer: in 1942
+Answer: came to Canada as a refugee with her family in 1942
 
 QuestionID: 1999-W37-4-2
-Answer: of all
+Answer: of Canadian evolution
 
 QuestionID: 1999-W37-4-3
 Answer: of Canadian evolution
 
 QuestionID: 1999-W37-4-4
-Answer: of the Canadian Museum of Civilization
+Answer: "I am very humbled by the idea of serving beyond, really, I could ever have expected what to do for my country
 
 QuestionID: 1999-W37-4-5
-Answer: to play an active, yet sensible role in Canadian unity
+Answer: she plans to play an active, yet sensible role in Canadian unity
 
 QuestionID: 1999-W37-4-6
 Answer: to use the governor general's Quebec City residence, the Citadel, more often
 
 QuestionID: 1999-W37-4-7
-Answer: of the Canadian Museum of Civilization
+Answer: "I am very humbled by the idea of serving beyond, really, I could ever have expected what to do for my country
 
 QuestionID: 1999-W37-4-9
-Answer: in Toronto
+Answer: for her career with CBC-TV, where she was a high-profile interviewer and host for three decades
 
 QuestionID: 1999-W37-4-10
-Answer: of the Canadian state
+Answer: more than 300 public appearances a year
 
 QuestionID: 1999-W38-1-1
-Answer: Canada will send as many as 600 soldiers to East Timor
+Answer: at the beginning of the summer
 
 QuestionID: 1999-W38-1-2
 Answer: that the conflict in East Timor was a matter for Indonesians to work out between themselves
@@ -476,37 +476,37 @@ QuestionID: 1999-W38-1-3
 Answer: to become independent from Indonesia
 
 QuestionID: 1999-W38-1-4
-Answer: 
+Answer: local military groups 
 
 QuestionID: 1999-W38-1-5
-Answer: of Dili 
+Answer: into a burning, looted ghost town
 
 QuestionID: 1999-W38-1-7
-Answer: 
+Answer: his mind
 
 QuestionID: 1999-W38-1-8
 Answer: Canada to have troops in East Timor within 30 days
 
 QuestionID: 1999-W38-1-9
-Answer: on 22 missions around the worldaround the world
+Answer: about 3,900 peacekeepers on 22 missions around the world
 
 QuestionID: 1999-W38-1-10
 Answer: that the people living in war-torn Kosovo are protected from violence
 
 QuestionID: 1999-W39-1-1
-Answer: in the Northwest Territories 
+Answer: francophones in the Northwest Territories 
 
 QuestionID: 1999-W39-1-2
 Answer: the territorial government isn't respecting its own language law
 
 QuestionID: 1999-W39-1-3
-Answer: 
+Answer: French
 
 QuestionID: 1999-W39-1-4
 Answer: The report itself, coming from the NWT language commissioner, is not even published in French
 
 QuestionID: 1999-W39-1-5
-Answer: the territorial government isn't respecting its own language law
+Answer: that 75 per cent of the documents it had requested from the territorial government in French were unavailable
 
 QuestionID: 1999-W39-1-6
 Answer: The report itself, coming from the NWT language commissioner, is not even published in French
@@ -515,124 +515,124 @@ QuestionID: 1999-W39-1-7
 Answer: to the Northwest Territories Supreme Court 
 
 QuestionID: 1999-W39-1-8
-Answer: not only in the Northwest Territories, but also in Nunavut and in the Yukon
+Answer: that is responsible for ensuring the equality of French and English in the territories, not only in the Northwest Territories, but also in Nunavut and in the Yukon
 
 QuestionID: 1999-W39-3-1
 Answer: It took him four tries, but yesterday evening New Democratic Party leader Gary Doer finally achieved what he set out to do
 
 QuestionID: 1999-W39-3-2
-Answer: talking about the problems of health care
+Answer: During the Manitoba election campaign
 
 QuestionID: 1999-W39-3-4
 Answer: finally winning feels good
 
 QuestionID: 1999-W39-3-5
-Answer: in 1981
+Answer: about 45 the largest share the party has won since Howard Pawley swept Conservative leader Sterling Lyon out of power in 1981
 
 QuestionID: 1999-W39-3-6
 Answer: that he will now retire from politics
 
 QuestionID: 1999-W39-3-7
-Answer: to make sure there are no mistakes -- in the suburban Winnipeg riding of Assiniboia, where Tory Linda McIntosh beat the NDP's Jim Rondeau by 3 votes
+Answer: where every vote is counted again to make sure there are no mistakes -- in the suburban Winnipeg riding of Assiniboia, where Tory Linda McIntosh beat the NDP's Jim Rondeau by 3 votes
 
 QuestionID: 1999-W39-3-8
-Answer: in 1981
+Answer: It took him four tries, but yesterday evening New Democratic Party leader Gary Doer finally achieved what he set out to do
 
 QuestionID: 1999-W39-3-9
-Answer: in 1981
+Answer: about 45 the largest share the party has won since Howard Pawley swept Conservative leader Sterling Lyon out of power in 1981
 
 QuestionID: 1999-W39-5-1
-Answer: of extra-curricular activities in schools
+Answer: the lack of extra-curricular activities in schools
 
 QuestionID: 1999-W39-5-3
-Answer: in contract discussions with the provincial governmentwith the provincial government
+Answer: in contract discussions with the provincial government
 
 QuestionID: 1999-W39-5-4
-Answer: in the week
+Answer: one adult 
 
 QuestionID: 1999-W39-5-5
 Answer: the disorganized protests were becoming dangerous
 
 QuestionID: 1999-W39-5-6
-Answer: During the past few days
+Answer: to express their frustrations
 
 QuestionID: 1999-W39-5-7
-Answer: that police were also pelted with rocks and garbage
+Answer: while they do not agree with the student demonstrations that are taking place during the school day
 
 QuestionID: 1999-W39-5-8
-Answer: between 300 and 400 students at the demonstration's peak
+Answer: drew between 300 and 400 students at the demonstration's peak
 
 QuestionID: 1999-W41-3-1
 Answer: the initial investigation suggests one of the trains passed one red and two yellow warning signals before hitting the other train
 
 QuestionID: 1999-W41-3-2
-Answer: at 8:11 a.m.
+Answer: of London's Paddington Station
 
 QuestionID: 1999-W41-3-3
-Answer: the initial investigation suggests one of the trains passed one red and two yellow warning signals before hitting the other trainone of the trains passed one red and two yellow warning signals before hitting the other train
+Answer: the initial investigation suggests one of the trains passed one red and two yellow warning signals before hitting the other train
 
 QuestionID: 1999-W41-3-4
-Answer: to account for missing passengers
+Answer: trying to account for missing passengers
 
 QuestionID: 1999-W41-3-5
-Answer: in the crash
+Answer: that operate the two trains involved in the crash
 
 QuestionID: 1999-W41-3-6
 Answer: as many as 500 people might have been on board its train, which originated in Cheltenham, northwest of London, and was minutes away from its destination of Paddington Station
 
 QuestionID: 1999-W41-3-7
-Answer: looking for the causes of a train crash that killed at least 27 people and injured 160 near a London rail station yesterday
+Answer: 
 
 QuestionID: 1999-W41-3-8
-Answer: the initial investigation suggests one of the trains passed one red and two yellow warning signals before hitting the other train
+Answer: as they described how they frantically crawled out broken windows in the aftermath
 
 QuestionID: 1999-W41-3-9
-Answer: of daily life for many people in London and its surrounding communitiesin London 
+Answer: for many people in London and its surrounding communities
 
 QuestionID: 1999-W41-5-1
-Answer: of Supreme Court of 
+Answer: Canada Justice Claire L'Heureux Dube
 
 QuestionID: 1999-W41-5-2
-Answer: of Supreme Court of 
+Answer: Canada Justice Claire L'Heureux Dube
 
 QuestionID: 1999-W41-5-3
-Answer: of "Right Honourable"
+Answer: once the oaths have been sworn and assumes the title "Excellency" while in office
 
 QuestionID: 1999-W41-5-5
-Answer: whom was there in spirit
+Answer: as she praised her 92-year-old father, and her mother she said whom was there in spirit
 
 QuestionID: 1999-W41-5-6
-Answer: in front of Supreme Court of 
+Answer: Canada Justice Claire L'Heureux Dube
 
 QuestionID: 1999-W41-5-8
-Answer: whom treated her as "bright, not bright yellow
+Answer: teachers she said whom treated her as "bright, not bright yellow
 
 QuestionID: 1999-W41-5-9
-Answer: of the Canada
+Answer: the Queen of England, who is the legal head of the Canada
 
 QuestionID: 1999-W41-5-10
-Answer: of Canada and cabinet 
+Answer: over the swearing-in of the Prime Minister, the Chief Justice of Canada and cabinet ministers
 
 QuestionID: 1999-W43-5-1
 Answer: that airs in some Canadian schools, is in trouble in Manitoba
 
 QuestionID: 1999-W43-5-2
-Answer: But they will not be allowed to extend those contracts
+Answer: a 12-minute daily feature shown during class time
 
 QuestionID: 1999-W43-5-3
-Answer: it has an audience for its commercial news service
+Answer: a profit 
 
 QuestionID: 1999-W43-5-4
-Answer: during class time
+Answer: a 12-minute daily feature shown during class time
 
 QuestionID: 1999-W43-5-6
-Answer: We will not have commercials and products being sold in the classrooms
+Answer: But they will not be allowed to extend those contracts
 
 QuestionID: 1999-W43-5-7
-Answer: about how schools in Quebec and Ontario are testing out the controversial concept in some classrooms
+Answer: stories about how schools in Quebec and Ontario are testing out the controversial concept in some classrooms
 
 QuestionID: 1999-W43-5-8
-Answer: during class time
+Answer: Nova Scotia and New Brunswick 
 
 QuestionID: 1999-W43-5-9
 Answer: to show the program on a six-month trial basis
@@ -641,40 +641,40 @@ QuestionID: 1999-W45-5-1
 Answer: in Arviat, Northwest Territories, a community of 1,300 people on the northwest shore of Hudson Bay
 
 QuestionID: 1999-W45-5-2
-Answer: with singer Susan Aglukark, pizza and a $10,000 cheque 
+Answer: the revival of their music program with singer Susan Aglukark, pizza and a $10,000 cheque 
 
 QuestionID: 1999-W45-5-3
-Answer: with a $10,000 cheque for the purchase of music instruments
+Answer: to present officials with a $10,000 cheque for the purchase of music instruments
 
 QuestionID: 1999-W45-5-4
-Answer: with singer Susan Aglukark, pizza and a $10,000 cheque 
+Answer: the revival of their music program with singer Susan Aglukark, pizza and a $10,000 cheque 
 
 QuestionID: 1999-W45-5-5
-Answer: For some students where food and shelter is a more pressing concern, it is the responsibility of the music society and of the school to provide an instrument
+Answer: MacLeod says running a successful music program in the North often requires providing instruments for students
 
 QuestionID: 1999-W45-5-6
 Answer: at the beginning of the school year
 
 QuestionID: 1999-W45-5-7
-Answer: of the school's populationin music classes at Inuksuk
+Answer: a quarter of the school's population
 
 QuestionID: 1999-W45-5-8
 Answer: between two or three students
 
 QuestionID: 1999-W45-5-9
-Answer: For example, the music society will be able to use the school's instruments and students may perform at community eventsto use the school's instruments and students 
+Answer: For example, the music society will be able to use the school's instruments and students may perform at community events
 
 QuestionID: 1999-W47-5-2
-Answer: the baby was no longer living
+Answer: her family received a notice that she'll be sterilized so she can't have any more babies if she returns to China
 
 QuestionID: 1999-W47-5-3
-Answer: may succeed where the claims of 32 people who arrived with her have failed
+Answer: her family received a notice that she'll be sterilized so she can't have any more babies if she returns to China
 
 QuestionID: 1999-W47-5-4
-Answer: her claim to be accepted as a refugee to Canada 
+Answer: it seems her claim to be accepted as a refugee to Canada may succeed where the claims of 32 people who arrived with her have failed
 
 QuestionID: 1999-W47-5-5
-Answer: may succeed where the claims of 32 people who arrived with her have failed
+Answer: to China
 
 QuestionID: 1999-W47-5-6
 Answer: that seven years ago she got pregnant for the second time
@@ -683,10 +683,10 @@ QuestionID: 1999-W47-5-7
 Answer: to have one child
 
 QuestionID: 1999-W47-5-9
-Answer: her family received a notice that she'll be sterilized so she can't have any more babies if she returns to China
+Answer: to China
 
 QuestionID: 1999-W47-5-11
-Answer: to remain in Canada
+Answer: the Federal Court of Appeal has concluded in the past that forced sterilization was a form of persecution, so this reason could be recognized as a reason for refugees to be allowed to remain in Canada
 
 QuestionID: 1999-W49-5-1
 Answer: skywatchers think of their god of war
@@ -695,94 +695,94 @@ QuestionID: 1999-W49-5-3
 Answer: from the Jet Propulsion Laboratory
 
 QuestionID: 1999-W49-5-4
-Answer: For the first time everon a spacecraft sent to Mars
+Answer: a microphone on a spacecraft sent to Mars
 
 QuestionID: 1999-W49-5-5
-Answer: with NASA scientists 
+Answer: lose contact with NASA scientists back home
 
 QuestionID: 1999-W49-5-6
-Answer: For the first time ever
+Answer: to find evidence that the atmosphere was once warmer and thicker
 
 QuestionID: 1999-W49-5-8
-Answer: skywatchers think of their god of war
+Answer: there may be more underground
 
 QuestionID: 1999-W49-5-10
-Answer: focus future missions searching for past or present life, which is dependent on water
+Answer: though the Lander's instruments cannot detect fossils or living organisms
 
 QuestionID: 1999-W51-1-1
-Answer: from Halifax, Nova Scotia
+Answer: to help the then-promising 19-year-old McLachlan, who had just recently moved to Vancouver from Halifax, Nova Scotia, to pursue a career as a recording artist
 
 QuestionID: 1999-W51-1-2
-Answer: McLachlan develop songs for her first contract because she had never written songs before
+Answer: to help the then-promising 19-year-old McLachlan, who had just recently moved to Vancouver from Halifax, Nova Scotia, to pursue a career as a recording artist
 
 QuestionID: 1999-W51-1-3
-Answer: by Darryl Neudorf
+Answer: the lawsuit 
 
 QuestionID: 1999-W51-1-5
-Answer: against Canadian pop singer Sarah McLachlan
+Answer: a copyright lawsuit against Canadian pop singer Sarah McLachlan
 
 QuestionID: 1999-W51-1-6
-Answer: to write songs
+Answer: to help the then-promising 19-year-old McLachlan, who had just recently moved to Vancouver from Halifax, Nova Scotia, to pursue a career as a recording artist
 
 QuestionID: 1999-W51-1-7
 Answer: by Darryl Neudorf
 
 QuestionID: 1999-W51-1-8
-Answer: he did not receive proper royalties for producing "Touch," which sold more than 625,000 copies
+Answer: a copyright lawsuit against Canadian pop singer Sarah McLachlan
 
 QuestionID: 1999-W51-1-9
 Answer: the performer - the mastermind of the popular Lilith Fair concert series that toured North America - is "very, very pleased and relieved
 
 QuestionID: 1999-W51-1-10
-Answer: how songs are put together
+Answer: played a keyboard before court staff, reporters and teenaged fans to illustrate how songs are put together
 
 QuestionID: 2000-W02-3-1
 Answer: that the tap water in 63 communities is contaminated
 
 QuestionID: 2000-W02-3-2
-Answer: of chlorine to drinking water
+Answer: when tiny amounts of chlorine are added to drinking water
 
 QuestionID: 2000-W02-3-3
-Answer: of trihalomethanes in drinking water 
+Answer: that can't afford expensive water filtration systems
 
 QuestionID: 2000-W02-3-4
-Answer: to be removed to prevent the outbreak of diseases such as typhoid fever and cholera
+Answer: microbiological organisms which have to be removed to prevent the outbreak of diseases such as typhoid fever and cholera
 
 QuestionID: 2000-W02-3-8
-Answer: everyone aware if there were risks 
+Answer: that the government "should have made everyone aware if there were risks -- like they are doing now -- two years ago
 
 QuestionID: 2000-W02-3-9
-Answer: for 24 hours
+Answer: many of the chemicals will evaporate
 
 QuestionID: 2000-W02-3-10
 Answer: 
 
 QuestionID: 2000-W02-5-1
-Answer: in the Fall  of 1998
+Answer: of crisis on Canadian farms 
 
 QuestionID: 2000-W02-5-2
-Answer: such  as Wide Mouth Mason and Big Sugar
+Answer: Gordon Lightfoot, Burton Cummings, Sylvia  Tyson, Kevin Parent, Fred Penner and Sharon, Lois and Bram, as well as bands such  as Wide Mouth Mason and Big Sugar
 
 QuestionID: 2000-W02-5-3
-Answer: 
-
-QuestionID: 2000-W02-5-5
 Answer: the concert will achieve two things
 
+QuestionID: 2000-W02-5-5
+Answer: it will show the country that Toronto cares
+
 QuestionID: 2000-W02-5-8
-Answer:  in Ottawa, Ontariofor cash-strapped farmers
+Answer: to work out a new aid package for cash-strapped farmers
 
 QuestionID: 2000-W03-1-1
 Answer: one of the teenagers was being treated for hypothermia -- when one's body temperature drops abnormally low -- and the other two appeared to be OK.  
 
 QuestionID: 2000-W03-1-2
-Answer: The five siblings sold more than two million records
+Answer: took its Celtic music to the world
 
 QuestionID: 2000-W03-1-3
 Answer: 
 
 QuestionID: 2000-W03-1-4
-Answer: to jump 
+Answer: "John Morris told them to jump and they got out
 
 QuestionID: 2000-W03-1-5
 Answer: he was stunned when he heard the news at the benefit
@@ -800,43 +800,43 @@ QuestionID: 2000-W03-1-9
 Answer: news of the accident spread quickly through the Nova Scotia music community
 
 QuestionID: 2000-W03-1-10
-Answer: 
+Answer: so its members could pursue independent careers and interests
 
 QuestionID: 2000-W03-2-1
-Answer: its radio systems might have failed, or that the lander could have sunk into Martian dust
+Answer: to land near Mars' south pole
 
 QuestionID: 2000-W03-2-2
 Answer: 
 
 QuestionID: 2000-W03-2-3
-Answer: its radio systems might have failed, or that the lander could have sunk into Martian dust
+Answer: to have touched down December 3 for a 90-day mission
 
 QuestionID: 2000-W03-2-4
-Answer: of the landing site for signs of the landerof the lander
+Answer: a spacecraft called the Mars Global Surveyor 
 
 QuestionID: 2000-W03-2-5
-Answer: from NASA's Mars Polar Lander
+Answer: After more than a month of searching for a signal from NASA's Mars Polar Lander
 
 QuestionID: 2000-W03-2-7
 Answer: After more than a month of searching for a signal from NASA's Mars Polar Lander
 
 QuestionID: 2000-W03-2-8
-Answer: at 8 a.m Monday
+Answer: with the three-legged lander ended with frustration at 8 a.m Monday
 
 QuestionID: 2000-W03-2-9
-Answer: We didn't see anything
+Answer: the lander could have exploded before entering the atmosphere
 
 QuestionID: 2000-W03-2-11
-Answer: on the side of a canyon of a canyon 
+Answer: on the side of a canyon 
 
 QuestionID: 2000-W03-3-2
 Answer: from taxpayers
 
 QuestionID: 2000-W03-3-3
-Answer: business is better 
+Answer: to move to the United States - where they say business is better 
 
 QuestionID: 2000-W03-3-4
-Answer: 
+Answer: 1.3 million dollars a season
 
 QuestionID: 2000-W03-3-5
 Answer: 
@@ -845,46 +845,46 @@ QuestionID: 2000-W03-3-6
 Answer: 
 
 QuestionID: 2000-W03-3-7
-Answer: on a team-by-team basisby-team 
+Answer: from Austin, Texas, where he is training for the Sydney Olympics
 
 QuestionID: 2000-W03-3-8
 Answer: to farmers who have been lobbying Ottawa for help
 
 QuestionID: 2000-W03-3-9
-Answer: of that in taxes
+Answer: your rent
 
 QuestionID: 2000-W03-3-10
-Answer: to give the teams money 
+Answer: in Montreal, Ottawa, Toronto, Calgary, Edmonton and Vancouver 
 
 QuestionID: 2000-W05-4-1
-Answer: On Sunday
+Answer: of the Hindu religion 
 
 QuestionID: 2000-W05-4-2
-Answer: 
+Answer: Fire
 
 QuestionID: 2000-W05-4-3
-Answer: from the Indian federal Information and Broadcasting Ministry
+Answer: permission to shoot the film from the Indian federal Information and Broadcasting Ministry, as well as the government of the state where the film is being shot
 
 QuestionID: 2000-W05-4-4
 Answer: 
 
 QuestionID: 2000-W05-4-5
-Answer: from the Indian federal Information and Broadcasting Ministry
+Answer: permission to shoot the film from the Indian federal Information and Broadcasting Ministry, as well as the government of the state where the film is being shot
 
 QuestionID: 2000-W05-4-6
 Answer: the attack has cost the production about a million dollars in damage and delays in the shooting schedule
 
 QuestionID: 2000-W05-4-7
-Answer: from theatres in India 
+Answer: after violent protests by Hindu nationalists
 
 QuestionID: 2000-W05-4-8
-Answer: that making a movie in India is  never easy
+Answer: in the south, where a majority of the population believes in the Hindu religion, and Pakistan in the north, where the majority of the population believes in the Muslim religion
 
 QuestionID: 2000-W05-4-9
-Answer: to hand over power
+Answer: huge protest marches, which forced Britain to hand over power
 
 QuestionID: 2000-W06-5-1
-Answer: to reach the peak of Canada's highest mountain
+Answer: to become the first blind climber to reach the peak of Canada's highest mountain
 
 QuestionID: 2000-W06-5-2
 Answer: to join a team of six other climbers this May on a journey to  the top of the 5,945-metre Mount Logan in the Yukon Territory
@@ -893,28 +893,28 @@ QuestionID: 2000-W06-5-3
 Answer: 
 
 QuestionID: 2000-W06-5-4
-Answer: of the outdoors who describes himself as a "scrambler"  when it comes to climbingas a "scrambler"   to climbing
+Answer: of the outdoors who describes himself as a "scrambler"  when it comes to climbing
 
 QuestionID: 2000-W06-5-5
-Answer: of the outdoors who describes himself as a "scrambler"  when it comes to climbingas a "scrambler"   to climbing
+Answer: his lack of technical climbing ability is more of a challenge than his  blindness
 
 QuestionID: 2000-W06-5-6
-Answer: of the outdoors who describes himself as a "scrambler"  when it comes to climbingas a "scrambler"   to climbing
+Answer: of the outdoors who describes himself as a "scrambler"  when it comes to climbing
 
 QuestionID: 2000-W06-5-7
-Answer: of the outdoors who describes himself as a "scrambler"  when it comes to climbingas a "scrambler"   to climbing
+Answer: of the outdoors who describes himself as a "scrambler"  when it comes to climbing
 
 QuestionID: 2000-W06-5-8
-Answer: his lack of technical climbing ability is more of a challenge than his  blindness
+Answer: who lost his vision from a pellet gun at the age of  12
 
 QuestionID: 2000-W06-5-9
-Answer: his lack of technical climbing ability is more of a challenge than his  blindness
+Answer: who lost his vision from a pellet gun at the age of  12
 
 QuestionID: 2000-W06-5-10
-Answer: of the outdoors who describes himself as a "scrambler"  when it comes to climbingas a "scrambler"   to climbing
+Answer: of the outdoors who describes himself as a "scrambler"  when it comes to climbing
 
 QuestionID: 2000-W07-5-1
-Answer: to Canada
+Answer: a controversial two-day visit to Canada
 
 QuestionID: 2000-W07-5-2
 Answer: of Austria's Freedom Party 
@@ -923,16 +923,16 @@ QuestionID: 2000-W07-5-3
 Answer: of being a Nazi sympathizer
 
 QuestionID: 2000-W07-5-5
-Answer: in Canada 
+Answer: the United States 
 
 QuestionID: 2000-W07-5-6
-Answer: of Montreal
+Answer: of Austria's Freedom Party 
 
 QuestionID: 2000-W07-5-7
-Answer: of the Jewish community 
+Answer: because even their clothes reflect their beliefs
 
 QuestionID: 2000-W07-5-8
-Answer: to attend the wedding
+Answer: for the Tash Hasidic community 
 
 QuestionID: 2000-W07-5-9
 Answer: playfully juggling a snowball at the city's memorial to Raoul Wallenberg, a European hero who saved many Jews during the holocaust

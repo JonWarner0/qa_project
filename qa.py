@@ -35,9 +35,6 @@ verb_re = re.compile(r'VERB')
 punc_re = re.compile(r"[\w']+|[.,!?;]") # use findall 
 question_word = re.compile(r'(?i)who|what|when|where|how|why')
 
-# Mappings to question functions
-qFunctionMap = dict()
-
 
 """ 
 -------- Class Definitions -------- 
@@ -93,7 +90,8 @@ def getAnswer(story,question):
     top = max(story.targets, key=lambda k:k.score) 
     if top.score < 4: # Did not score high enough to be a likely answer 
         return ''       # threshold = 4 -> highest avg recall by 10% and same percision as others
-    return verbDepExtraction(top,question)
+    #return top.sent # gets 57% recall, 18% percision, F=27%
+    return subDepExtraction(top,question) # 39% recall, 24% percision, F=29%
 
 
 def verbMatching(story, question): 
@@ -148,74 +146,34 @@ def getSynsetsAndHypernyms(words, pos_):
     return synonyms, hypernyms
 
 
-def verbDepExtraction(comp, q):
+def subDepExtraction(comp, q):
     """ Extract the substring related to the subdependency parse of the verb. 
     Requires that the most likely sentence is passed in as composition object"""
     sub_trees = []
     for word in dependency_parser(comp.sent): #extract the subtrees based on verbs
         # Prep improved percision but dropped recall
-        if word.dep_ in ('xcomp', 'ccomp'):
+        if word.dep_ in ('xcomp','ccomp','prep','conj','relcl','advcl','dobj','mark'):
             sub_trees.append(''.join(w.text_with_ws for w in word.subtree))
-    if len(sub_trees) == 0: # no verb candidate to make smaller
-        return exctractPrep(comp,q)#comp.sent#npExtraction(comp,q) #Np extract lowers percision
+    if len(sub_trees) == 0: # no candidates to make smaller
+        return comp.sent 
     elif len(sub_trees) == 1: # only one option
         return sub_trees[0]
-    q_type =  question_word.search(q.question)
-    if q_type: # determine most likely based on the question word
-        q_word = q_type.group(0).lower() 
-        sub_phrase = qFunctionMap[q_word](sub_trees, q) 
-        return sub_phrase
-    else:
-        return comp.sent # unable to match question type
+    best = ('',0)
+    stem_q = ' '.join(d.lemma_ for d in q.dep_parse)
+    for tree in sub_trees:
+        stem_tree = ' '.join(w.lemma_ for w in dependency_parser(tree))
+        overlap = computeOverlap(stem_tree, stem_q)
+        if overlap > best[1]:
+            best = (tree, overlap)
+    return best[0]
 
-
-def qWho(trees,q):
-    stem_q = {d.lemma_ for d in q.dep_parse}
-    best = []
-    for t in trees:
-        parse = dependency_parser(t)
-        for p in parse.ents:
-            if p.lemma_ in stem_q: #inverted overlap -> the question won't contain answer
-                break
-            else:
-                best.append(t)
-    if len(best) == 0:
-        return ''.join(trees) # none can be rated higher so return who sentence
-    return best[rand.randint(0,len(best)-1)] #any could be the answer. Make a guess
-
-
-#TODO: fill these out to constrain the randomness
-def qWhat(trees,q):
-    return trees[rand.randint(0,len(trees)-1)]
-
-def qWhere(trees,q):
-    return trees[rand.randint(0,len(trees)-1)]
-
-def qWhen(trees,q):
-    return trees[rand.randint(0,len(trees)-1)]
-
-def qHow(trees,q):
-    return trees[rand.randint(0,len(trees)-1)]
-
-def qWhy(trees,q):
-    return trees[rand.randint(0,len(trees)-1)]
-
-# --- Assignment of mapping ---- 
-qFunctionMap = {
-    'who': qWho,
-    'what' : qWhat,
-    'where' : qWhere,
-    'when' : qWhen,
-    'how' : qHow,
-    'why' : qWhy
-}
 
 # Good balance between recall(raised 9%) and percision(dropped 18%)
 # TODO: raise percision back up
 def exctractPrep(comp,q):
     sub_trees = []
     for word in dependency_parser(comp.sent): 
-        if word.dep_ in ('prep'):
+        if word.dep_ in ('prep', 'conj', 'relcl'):
             sub_trees.append(''.join(w.text_with_ws for w in word.subtree))
     stem_q = {d.lemma_ for d in q.dep_parse}
     best = []
@@ -223,8 +181,6 @@ def exctractPrep(comp,q):
         parse = dependency_parser(t)
         for p in parse.ents:
             if p.lemma_ in stem_q: #inverted overlap -> the question won't contain answer
-                break
-            else:
                 best.append(t)
     if len(best) == 0:
         return ''.join(sub_trees) # none can be rated higher so return who sentence
@@ -246,7 +202,7 @@ def npExtraction(sentence, q):
             if split_sent[i].find(phrase_arr[0]) != -1:
                 start = i
                 break      
-        subs.append(split_sent[start-6:start+len(phrase_arr)+6])
+        subs.append(split_sent[start-3:start+len(phrase_arr)+7])
     candidate = ('',0)
     split_q = set(q.question.split())
     for s in subs:

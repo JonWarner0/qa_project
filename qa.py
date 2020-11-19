@@ -72,6 +72,7 @@ class composition:
         self.noun_phrase = {t.text for t in sent.noun_chunks}
         self.verbs = set()
         self.score = 0
+        self.matched_verbs = set() #store then extract the subtreee around this for answer
         for t in sent:
             if question_word.search(t.lemma_):
                 self.q_tag = t.lemma_
@@ -107,7 +108,7 @@ def verbMatching(story, question):
             q = syns_q_v.union(hyper_q_v)
             if v in q: 
                 target.score += 3 # weight verbs heavily as they are more unique
-
+                #TODO: figure out which verb word to add . some mapping of syns and hypers
 
 def nounMatching(story, question):
     """ Computes the overlap of of the NER phrases and NP that appear in 
@@ -155,7 +156,7 @@ def subDepExtraction(comp, q):
         # Prep improved percision but dropped recall
         if word.dep_ in ('xcomp','ccomp','cc','relcl','prep','advcl'):
             sub_trees.append(''.join(w.text_with_ws for w in word.subtree))
-        elif word.dep_ in ('conj','dobj','mark','cc'):
+        elif word.dep_ in ('conj','dobj','mark'):
             sub_trees.append(''.join(w.text_with_ws for w in word.head.subtree))
     if len(sub_trees) == 0: # no candidates to make smaller
         return comp.sent 
@@ -170,15 +171,6 @@ def subDepExtraction(comp, q):
             best = (tree, overlap) 
     return best[0]
 
-#split on in sentence punctuation to increase percision but it didnt really do anything
-#other than a few cases
-"""   for tree in sub_trees:
-        split_punc =  re.split(sent_punc_re,tree)
-        for s in split_punc:
-            stem_tree = ' '.join(w.lemma_ for w in dependency_parser(s))
-            overlap = computeOverlap(stem_tree, stem_q)
-            if overlap > best[1]:
-                best = (s, overlap) """
 
 # Assumption that the answer relating to the NP in the question, is near the NP in the sentence
 # Strip off words that are not likely to relate to the answer to increase percision

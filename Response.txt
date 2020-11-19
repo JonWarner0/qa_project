@@ -5,19 +5,19 @@ QuestionID: 1999-W07-5-2
 Answer: 
 
 QuestionID: 1999-W07-5-4
-Answer: Shivering, hungry, lost on a mountain in blizzard conditions, two Alberta boys spent a night in a snow cave sleeping in shifts and dreaming of food and rescue
+Answer: The two kept heading downhill, but when they reached a riverbank around 4 p.m., they realized they were lost and decided to head back uphill to try to regain their way
 
 QuestionID: 1999-W07-5-5
 Answer: Shivering, hungry, lost on a mountain in blizzard conditions, two Alberta boys spent a night in a snow cave sleeping in shifts and dreaming of food and rescue
 
 QuestionID: 1999-W07-5-6
-Answer: Using their hands, the two dug into the snow hollow around the base of a tree, covered the floor with pine boughs and settled in for a long, cold night
+Answer: when the boys took a wrong turn heading back to the resort chalet
 
 QuestionID: 1999-W07-5-7
 Answer: that the search parties were called in and 
 
 QuestionID: 1999-W07-5-8
-Answer: the Kolla brothers' cool heads, backwoods savvy and faith in themselves 
+Answer: After a rest, they set out again and soon came to the cross-country ski trail where they were found by a party of snowmobilers
 
 QuestionID: 1999-W07-5-12
 Answer: 
@@ -59,13 +59,13 @@ QuestionID: 1999-W09-5-2
 Answer: 
 
 QuestionID: 1999-W09-5-3
-Answer: "The more you trust other people, you also gain it back.
+Answer: And I think you have the chance for these people to return to their communities and contribute
 
 QuestionID: 1999-W09-5-5
 Answer: costing tens of thousands of dollars for equipment, clothing and supervision
 
 QuestionID: 1999-W09-5-6
-Answer: In the summer 
+Answer: The party is hunting caribou, far from the city on the frozen tundra
 
 QuestionID: 1999-W09-5-7
 Answer: 
@@ -89,19 +89,19 @@ QuestionID: 1999-W26-1-1
 Answer: Over the weekend, NATO authorities also reached a peace deal with the Kosovo Liberation Army (KLA), a group of Yugoslavians of Albanian heritage who were fighting against the Yugoslavian army
 
 QuestionID: 1999-W26-1-2
-Answer: in countries around the world, including Canada
+Answer: Over the weekend, NATO authorities also reached a peace deal with the Kosovo Liberation Army (KLA), a group of Yugoslavians of Albanian heritage who were fighting against the Yugoslavian army
 
 QuestionID: 1999-W26-1-3
 Answer: to live together in peace
 
 QuestionID: 1999-W26-1-6
-Answer: of the world's eight leading industrialized countries, known as the Group of Eight or the G8, 
+Answer: with a plan to rebuild the region and make sure that a lasting peace can be maintained
 
 QuestionID: 1999-W26-1-7
 Answer: It could cost more than a hundred billion dollars to rebuild what NATO destroyed in Yugoslavia
 
 QuestionID: 1999-W26-1-9
-Answer: of the world's eight leading industrialized countries, known as the Group of Eight or the G8, 
+Answer: of Yugolsavians of Serbian heritage 
 
 QuestionID: 1999-W27-3-1
 Answer: Mr. Neudorf is suing Ms. McLachlan for song writing credit and a share of money from her first album, recorded more than 10 years ago
@@ -122,7 +122,7 @@ QuestionID: 1999-W27-3-8
 Answer: Canada's copyright act came into effect in 1924, and is based largely on the law in the United Kingdom
 
 QuestionID: 1999-W27-3-9
-Answer: The case has attracted international attention not only because of Sarah McLachlan's fame, but also because of the legal issues it raises
+Answer: Closing arguments are expected to wrap up today but because of the complexity of the case, it may be months before a decision is made
 
 QuestionID: 1999-W27-3-10
 Answer: to a question of his word against hers
@@ -134,7 +134,7 @@ QuestionID: 1999-W28-1-2
 Answer: The 13-year-old from Martensville
 
 QuestionID: 1999-W28-1-3
-Answer: raise money to pay for Tyrell's treatment in Mexico
+Answer: he was cancer-free
 
 QuestionID: 1999-W28-1-4
 Answer: Shortly after, Tyrell's parents took the boy to Mexico for the alternative treatment
@@ -143,7 +143,7 @@ QuestionID: 1999-W28-1-5
 Answer: as his case went through the courts
 
 QuestionID: 1999-W28-1-6
-Answer: from Mexico 
+Answer: When it was discovered the cancer had spread to Tyrell's lungs
 
 QuestionID: 1999-W28-1-7
 Answer: in Mexico 
@@ -173,7 +173,7 @@ QuestionID: 1999-W29-4-7
 Answer: Amber had the surgery to control a disease she has suffered from her whole life
 
 QuestionID: 1999-W29-4-8
-Answer: The surgery performed on Amber is called a hemispherectomy, and is usually performed on younger patients
+Answer: Seizures cause a violent jerking of the arms and legs, and are difficult to control with medication
 
 QuestionID: 1999-W31-1-1
 Answer: 
@@ -188,10 +188,10 @@ QuestionID: 1999-W31-1-4
 Answer: It can do this because it has special sensors
 
 QuestionID: 1999-W31-1-5
-Answer: likely in water held in the bottom of a boat
+Answer: The round goby is reducing precious sport fish stocks in the lake
 
 QuestionID: 1999-W31-1-6
-Answer: likely in water held in the bottom of a boat
+Answer: the round goby makes life miserable for fishers too, because they steal bait and will also hit lures
 
 QuestionID: 1999-W31-1-7
 Answer: these measures will keep the round goby from taking over the waterways of central Canada
@@ -215,7 +215,7 @@ QuestionID: 1999-W31-3-6
 Answer: to cut people's taxes within three years
 
 QuestionID: 1999-W31-3-7
-Answer: to call a new election
+Answer: to call the election after the other parties voted against his budget
 
 QuestionID: 1999-W31-3-8
 Answer: the legislature has lost confidence in them
@@ -227,7 +227,7 @@ QuestionID: 1999-W31-5-1
 Answer: Eugene Shoemaker may finally fulfill his lifelong wish to go to the moon
 
 QuestionID: 1999-W31-5-2
-Answer: on craters and the collisions that cause them
+Answer: on several U.S. space missions, including the Apollo missions to the moon
 
 QuestionID: 1999-W31-5-3
 Answer: to crash land on the moon early Saturday morning
@@ -239,10 +239,10 @@ QuestionID: 1999-W31-5-5
 Answer: on craters and the collisions that cause them
 
 QuestionID: 1999-W31-5-6
-Answer: a well-known astronomer and geologist
+Answer: with discovering about 20 comets and 800 asteroids
 
 QuestionID: 1999-W31-5-7
-Answer: Shoemaker gained worldwide fame in 1994, when he helped discover the comet Shoemaker-Levy 9
+Answer: with discovering about 20 comets and 800 asteroids
 
 QuestionID: 1999-W31-5-8
 Answer: 
@@ -263,7 +263,7 @@ QuestionID: 1999-W32-4-2
 Answer: with five robots on each team
 
 QuestionID: 1999-W32-4-3
-Answer: with five robots on each team
+Answer: The world may have to wait before people compete against human-sized robots in a soccer game, but on Wednesday fans got to see robots play soccer against each other
 
 QuestionID: 1999-W32-4-4
 Answer: The president of the RoboCup Federation wants to have robots competing against humans by the year 2050
@@ -278,7 +278,7 @@ QuestionID: 1999-W32-4-8
 Answer: At the third annual Robot World Cup Soccer tournament in Sweden, Iranian robots beat Italian robots 3-1
 
 QuestionID: 1999-W32-4-9
-Answer: to be competing in the 2002 tournament
+Answer: to have robots competing against humans by the year 2050
 
 QuestionID: 1999-W32-4-11
 Answer: in Australia 
@@ -293,7 +293,7 @@ QuestionID: 1999-W32-5-3
 Answer: The mud was one metre deep in some areas of the road, and at its height covered all four lanes of the divided highway
 
 QuestionID: 1999-W32-5-4
-Answer: across part of the Trans-Canada highway
+Answer: The mud was one metre deep in some areas of the road, and at its height covered all four lanes of the divided highway
 
 QuestionID: 1999-W32-5-5
 Answer: to re-open the parts of the highway
@@ -314,7 +314,7 @@ QuestionID: 1999-W33-3-1
 Answer: The last solar eclipse of the millennium brightened the morning for millions of people in Europe on Wednesday
 
 QuestionID: 1999-W33-3-2
-Answer: what they were doing to take a glance at history
+Answer: that it was a total eclipse, where the moon totally blocks the sun
 
 QuestionID: 1999-W33-3-3
 Answer: The path of the moon's shadow began in the Atlantic, and crossed central Europe, Turkey, Iran and India
@@ -335,7 +335,7 @@ QuestionID: 1999-W33-3-8
 Answer: In twenty five years an astronomer who observed every total solar eclipse, would watch only about an hour of total eclipses
 
 QuestionID: 1999-W33-3-9
-Answer: A partial eclipse {where the moon covers part, but not all of the sun} 
+Answer: In twenty five years an astronomer who observed every total solar eclipse, would watch only about an hour of total eclipses
 
 QuestionID: 1999-W33-3-10
 Answer: 
@@ -344,7 +344,7 @@ QuestionID: 1999-W33-5-2
 Answer: the federal and provincial governments to help clean up the harbour
 
 QuestionID: 1999-W33-5-3
-Answer: because the town is a United Nations World Heritage Site
+Answer: the federal and provincial governments to help clean up the harbour
 
 QuestionID: 1999-W33-5-4
 Answer: Lunenburg is a special case because of 
@@ -380,7 +380,7 @@ QuestionID: 1999-W34-4-4
 Answer: Rescue workers spent hours digging through the rubble, frantically trying to save people trapped under concrete and metal
 
 QuestionID: 1999-W34-4-5
-Answer: The centre of the earthquake hit Izmit, the region just south of Istanbul, the country's capital
+Answer: The earthquake has reportedly killed more than 6,000 people, and left at least 21,000 injured
 
 QuestionID: 1999-W34-4-6
 Answer: of the earthquake victims 
@@ -395,10 +395,10 @@ QuestionID: 1999-W34-4-9
 Answer: 
 
 QuestionID: 1999-W34-4-11
-Answer: The group is trained in communication and providing medical assistance
+Answer: Magnitude measures the amount of energy released by an earthquake
 
 QuestionID: 1999-W35-5-2
-Answer: Canadian kids are spending almost one full day a week glued to their television screens
+Answer: that not all television is bad
 
 QuestionID: 1999-W35-5-3
 Answer: doctors to monitor how much time children are sitting in front of electronic screens
@@ -440,7 +440,7 @@ QuestionID: 1999-W37-2-10
 Answer: Earlier Chirac gave the impression he would leave the territory empty-handed
 
 QuestionID: 1999-W37-4-1
-Answer: Prime Minister Jean Chretien approached her "early in the summer" about replacing Governor-General Romeo LeBlanc, who had asked to step down
+Answer: Clarkson, who currently heads the board of the Canadian Museum of Civilization, officially replaces Romeo LeBlanc on Oct. 7
 
 QuestionID: 1999-W37-4-2
 Answer: The 60-year-old Clarkson was born in Hong Kong in 1939, but came to Canada as a refugee with her family in 1942
@@ -449,7 +449,7 @@ QuestionID: 1999-W37-4-3
 Answer: Adrienne Clarkson calls it a sign of Canadian evolution
 
 QuestionID: 1999-W37-4-4
-Answer: Prime Minister Jean Chretien approached her "early in the summer" about replacing Governor-General Romeo LeBlanc, who had asked to step down
+Answer: The 60-year-old Clarkson was born in Hong Kong in 1939, but came to Canada as a refugee with her family in 1942
 
 QuestionID: 1999-W37-4-5
 Answer: she plans to play an active, yet sensible role in Canadian unity
@@ -458,7 +458,7 @@ QuestionID: 1999-W37-4-6
 Answer: to use the governor general's Quebec City residence, the Citadel, more often
 
 QuestionID: 1999-W37-4-7
-Answer: Prime Minister Jean Chretien approached her "early in the summer" about replacing Governor-General Romeo LeBlanc, who had asked to step down
+Answer: The 60-year-old Clarkson was born in Hong Kong in 1939, but came to Canada as a refugee with her family in 1942
 
 QuestionID: 1999-W37-4-9
 Answer: for her career with CBC-TV, where she was a high-profile interviewer and host for three decades
@@ -521,16 +521,16 @@ QuestionID: 1999-W39-3-1
 Answer: It took him four tries, but yesterday evening New Democratic Party leader Gary Doer finally achieved what he set out to do: win a provincial election and become the Premier of Manitoba
 
 QuestionID: 1999-W39-3-2
-Answer: During the Manitoba election campaign, the NDP spent a lot of time talking about the problems of health care
+Answer: that he will now retire from politics
 
 QuestionID: 1999-W39-3-4
-Answer: finally winning feels good
+Answer: to get rid of what has become known as "hallway medicine
 
 QuestionID: 1999-W39-3-5
 Answer: The NDP could still add one more seat to the 31 it has won officially
 
 QuestionID: 1999-W39-3-6
-Answer: It took him four tries, but yesterday evening New Democratic Party leader Gary Doer finally achieved what he set out to do: win a provincial election and become the Premier of Manitoba
+Answer: that he will now retire from politics
 
 QuestionID: 1999-W39-3-7
 Answer: where every vote is counted again to make sure there are no mistakes -- in the suburban Winnipeg riding of Assiniboia, where Tory Linda McIntosh beat the NDP's Jim Rondeau by 3 votes
@@ -545,7 +545,7 @@ QuestionID: 1999-W39-5-1
 Answer: They are protesting the lack of extra-curricular activities in schools
 
 QuestionID: 1999-W39-5-3
-Answer: in contract discussions with the provincial government
+Answer: To put pressure on the government
 
 QuestionID: 1999-W39-5-4
 Answer: Thirty-five students and one adult 
@@ -557,7 +557,7 @@ QuestionID: 1999-W39-5-6
 Answer: to express their frustrations
 
 QuestionID: 1999-W39-5-7
-Answer: Teachers' union officials say that while they do not agree with the student demonstrations that are taking place during the school day, the boycott of extra-curricular activities would continue
+Answer: who added that police were also pelted with rocks and garbage
 
 QuestionID: 1999-W39-5-8
 Answer: The students roved between two east-end high schools and drew between 300 and 400 students at the demonstration's peak
@@ -596,7 +596,7 @@ QuestionID: 1999-W41-5-2
 Answer: Ms. Clarkson took the Oath of Office in front of Supreme Court of Canada Justice Claire L'Heureux Dube
 
 QuestionID: 1999-W41-5-3
-Answer: Ms. Clarkson took the Oath of Office in front of Supreme Court of Canada Justice Claire L'Heureux Dube
+Answer: The Governor General formally takes office once the oaths have been sworn and assumes the title "Excellency" while in office, and the lifetime title of "Right Honourable"
 
 QuestionID: 1999-W41-5-5
 Answer: During a speech, Ms. Clarkson fought back tears as she praised her 92-year-old father, and her mother whom she said was there in spirit
@@ -620,7 +620,7 @@ QuestionID: 1999-W43-5-2
 Answer: that gives schools free equipment - like televisions and computers 
 
 QuestionID: 1999-W43-5-3
-Answer: They can make their ads specifically for students between 12 and 17
+Answer: YNN makes a profit by selling advertising space
 
 QuestionID: 1999-W43-5-4
 Answer: YNN presents a 12-minute daily feature shown during class time
@@ -632,7 +632,7 @@ QuestionID: 1999-W43-5-7
 Answer: to make sure it has an audience for its commercial news service
 
 QuestionID: 1999-W43-5-8
-Answer: to make sure it has an audience for its commercial news service
+Answer: British Columbia, Nova Scotia and New Brunswick rejected the idea
 
 QuestionID: 1999-W43-5-9
 Answer: to show the program on a six-month trial basis
@@ -701,10 +701,10 @@ QuestionID: 1999-W49-5-5
 Answer: that the costly mission could hit a rock or lose contact with NASA scientists back home
 
 QuestionID: 1999-W49-5-6
-Answer: Once on the surface, the craft's instruments some to test the atmospherewill be deployed -- , others to claw out samples of dust and, possibly, ice
+Answer: there may be more underground
 
 QuestionID: 1999-W49-5-8
-Answer: skywatchers think of their god of war
+Answer: there may be more underground
 
 QuestionID: 1999-W49-5-10
 Answer: though the Lander's instruments cannot detect fossils or living organisms
@@ -713,7 +713,7 @@ QuestionID: 1999-W51-1-1
 Answer: to help the then-promising 19-year-old McLachlan, who had just recently moved to Vancouver from Halifax, Nova Scotia, to pursue a career as a recording artist
 
 QuestionID: 1999-W51-1-2
-Answer: A Vancouver, British Columbia, judge has thrown out a copyright lawsuit against Canadian pop singer Sarah McLachlan
+Answer: Neudorf was properly compensated, receiving about $4,000 in wages and royalties worth 16 cents on each "Touch" album sold
 
 QuestionID: 1999-W51-1-3
 Answer: British Columbia Supreme Court Justice Bruce Cohen dismissed the lawsuit by Darryl Neudorf
@@ -725,7 +725,7 @@ QuestionID: 1999-W51-1-6
 Answer: to help the then-promising 19-year-old McLachlan, who had just recently moved to Vancouver from Halifax, Nova Scotia, to pursue a career as a recording artist
 
 QuestionID: 1999-W51-1-7
-Answer: McLachlan develop songs for her first contract because she had never written songs before
+Answer: Neudorf wanted money and credit for four songs he says he helped write for McLachlan's 1988 debut album, "Touch"
 
 QuestionID: 1999-W51-1-8
 Answer: he did not receive proper royalties for producing "Touch," which sold more than 625,000 copies
@@ -746,7 +746,7 @@ QuestionID: 2000-W02-3-3
 Answer: that can't afford expensive water filtration systems
 
 QuestionID: 2000-W02-3-4
-Answer: that can't afford expensive water filtration systems
+Answer: First, almost all sources of water contain microbiological organisms which have to be removed to prevent the outbreak of diseases such as typhoid fever and cholera
 
 QuestionID: 2000-W02-3-8
 Answer: that the government "should have made everyone aware if there were risks -- like they are doing now -- two years ago
@@ -761,13 +761,13 @@ QuestionID: 2000-W02-5-1
 Answer: of crisis on Canadian farms 
 
 QuestionID: 2000-W02-5-2
-Answer: to think we are an evil, uncaring, don't-give-a-damn-kind of community
+Answer: The lineup for the concert includes Gordon Lightfoot, Burton Cummings, Sylvia  Tyson, Kevin Parent, Fred Penner and Sharon, Lois and Bram, as well as bands such  as Wide Mouth Mason and Big Sugar
 
 QuestionID: 2000-W02-5-3
-Answer: to open people's eyes to the growing farm crisis in Canada
+Answer: the concert's message will still get out as people across the country can tune  into the event live on CBC Newsworld
 
 QuestionID: 2000-W02-5-5
-Answer: the concert's message will still get out as people across the country can tune  into the event live on CBC Newsworld
+Answer: the concert will achieve two things
 
 QuestionID: 2000-W02-5-8
 Answer: to work out a new aid package for cash-strapped farmers
@@ -776,7 +776,7 @@ QuestionID: 2000-W03-1-1
 Answer: John Morris Rankin played fiddle and piano with the popular musical family from Cape Breton
 
 QuestionID: 2000-W03-1-2
-Answer: one of the teenagers was being treated for hypothermia -- when one's body temperature drops abnormally low -- and the other two appeared to be OK.  
+Answer: The five siblings sold more than two million records, won five Juno Awards, including group of the year in 1994, and took its Celtic music to the world
 
 QuestionID: 2000-W03-1-3
 Answer: 
@@ -803,7 +803,7 @@ QuestionID: 2000-W03-1-10
 Answer: so its members could pursue independent careers and interests
 
 QuestionID: 2000-W03-2-1
-Answer: to land near Mars' south pole
+Answer: at NASA's Jet Propulsion Laboratory
 
 QuestionID: 2000-W03-2-2
 Answer: 
@@ -821,10 +821,10 @@ QuestionID: 2000-W03-2-7
 Answer: After more than a month of searching for a signal from NASA's Mars Polar Lander, mission controllers have given up hope of finding it
 
 QuestionID: 2000-W03-2-8
-Answer: After more than a month of searching for a signal from NASA's Mars Polar Lander, mission controllers have given up hope of finding it
+Answer: before beginning its descent
 
 QuestionID: 2000-W03-2-9
-Answer: Controllers have been testing dozens of different scenarios to try and explain what might have happened to the lander
+Answer: the lander could have exploded before entering the atmosphere
 
 QuestionID: 2000-W03-2-11
 Answer: The Mars Polar Lander could have touched down on the side of a canyon and toppled over
@@ -845,7 +845,7 @@ QuestionID: 2000-W03-3-6
 Answer: 
 
 QuestionID: 2000-W03-3-7
-Answer: The average NHL player makes 1.3 million dollars a season
+Answer: his group struggles on a daily basis to help with basic needs of the poor
 
 QuestionID: 2000-W03-3-8
 Answer: Manitoba Agriculture Minister Rosann Wowchuk calls it a slap in the face to farmers who have been lobbying Ottawa for help
@@ -896,13 +896,13 @@ QuestionID: 2000-W06-5-4
 Answer: of the outdoors who describes himself as a "scrambler"  when it comes to climbing
 
 QuestionID: 2000-W06-5-5
-Answer: to quote one of my fellow climbers who said, 'When (sighted people)  
+Answer: of the outdoors who describes himself as a "scrambler"  when it comes to climbing
 
 QuestionID: 2000-W06-5-6
-Answer: to quote one of my fellow climbers who said, 'When (sighted people)  
+Answer: of a team that scaled Alaska's Mount McKinley  - North America's highest mountain
 
 QuestionID: 2000-W06-5-7
-Answer: to quote one of my fellow climbers who said, 'When (sighted people)  
+Answer: of the outdoors who describes himself as a "scrambler"  when it comes to climbing
 
 QuestionID: 2000-W06-5-8
 Answer: who lost his vision from a pellet gun at the age of  12
@@ -911,13 +911,13 @@ QuestionID: 2000-W06-5-9
 Answer: who lost his vision from a pellet gun at the age of  12
 
 QuestionID: 2000-W06-5-10
-Answer: are climbing, we look down and we get scared because the wrong messages are rolling through our heads
+Answer: to become the first blind climber to reach the peak of Canada's highest mountain
 
 QuestionID: 2000-W07-5-1
 Answer: Austrian politician Joerg Haider has ended a controversial two-day visit to Canada
 
 QuestionID: 2000-W07-5-2
-Answer: of Austria's Freedom Party 
+Answer: he understood Haider had flown to Montreal to try to attend the wedding of a well known Hasidic leader's relative on Wednesday evening
 
 QuestionID: 2000-W07-5-3
 Answer: of being a Nazi sympathizer
@@ -926,7 +926,7 @@ QuestionID: 2000-W07-5-5
 Answer: Jewish and human rights groups in Canada and the United States condemned his visit
 
 QuestionID: 2000-W07-5-6
-Answer: of Austria's Freedom Party 
+Answer: he understood Haider had flown to Montreal to try to attend the wedding of a well known Hasidic leader's relative on Wednesday evening
 
 QuestionID: 2000-W07-5-7
 Answer: because even their clothes reflect their beliefs

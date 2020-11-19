@@ -1,2 +1,2 @@
-/Users/jonwarner/Documents/class/fall2020/cs5340/QA_project/qa_project/developset/
-1999-W13-3
+/Users/jonwarner/Documents/class/fall2020/cs5340/QA_project/qa_project/Testset1/
+1999-W07-5

@@ -3,7 +3,6 @@ import sys
 import nltk 
 from nltk.corpus import wordnet as wn
 import re
-import random as rand
 
 """ 
 -------- Global Definitions and Setup/Downloads -------- 
@@ -33,8 +32,9 @@ except Exception:
 noun_re = re.compile(r'PROPN | PRON | NOUN | NUM')  #Nouns and Nums together for simplicity
 verb_re = re.compile(r'VERB') 
 punc_re = re.compile(r"[\w']+|[.,!?;]") # use findall 
+sent_punc_re = re.compile(r'[,;]')
 question_word = re.compile(r'(?i)who|what|when|where|how|why')
-
+who_re = re.compile(r'(?i)who')
 
 """ 
 -------- Class Definitions -------- 
@@ -89,9 +89,10 @@ def getAnswer(story,question):
     nounMatching(story,question)
     top = max(story.targets, key=lambda k:k.score) 
     if top.score < 4: # Did not score high enough to be a likely answer 
-        return ''       # threshold = 4 -> highest avg recall by 10% and same percision as others
-    #return top.sent # gets 57% recall, 18% percision, F=27%
-    return subDepExtraction(top,question) # 39% recall, 24% percision, F=29%
+        return ''  
+    if top.score < 6: # Not enough there to effectively extract substing but likely contains answer
+        return top.sent
+    return subDepExtraction(top,question) # extract substring
 
 
 def verbMatching(story, question): 
@@ -105,7 +106,7 @@ def verbMatching(story, question):
             syns_q_v, hyper_q_v = getSynsetsAndHypernyms(question.target.verbs, wn.VERB)
             q = syns_q_v.union(hyper_q_v)
             if v in q: 
-                target.score += 3
+                target.score += 3 # weight verbs heavily as they are more unique
 
 
 def nounMatching(story, question):
@@ -152,8 +153,10 @@ def subDepExtraction(comp, q):
     sub_trees = []
     for word in dependency_parser(comp.sent): #extract the subtrees based on verbs
         # Prep improved percision but dropped recall
-        if word.dep_ in ('xcomp','ccomp','prep','conj','relcl','advcl','dobj','mark'):
+        if word.dep_ in ('xcomp','ccomp','cc','relcl','prep','advcl'):
             sub_trees.append(''.join(w.text_with_ws for w in word.subtree))
+        elif word.dep_ in ('conj','dobj','mark','cc'):
+            sub_trees.append(''.join(w.text_with_ws for w in word.head.subtree))
     if len(sub_trees) == 0: # no candidates to make smaller
         return comp.sent 
     elif len(sub_trees) == 1: # only one option
@@ -164,28 +167,18 @@ def subDepExtraction(comp, q):
         stem_tree = ' '.join(w.lemma_ for w in dependency_parser(tree))
         overlap = computeOverlap(stem_tree, stem_q)
         if overlap > best[1]:
-            best = (tree, overlap)
+            best = (tree, overlap) 
     return best[0]
 
-
-# Good balance between recall(raised 9%) and percision(dropped 18%)
-# TODO: raise percision back up
-def exctractPrep(comp,q):
-    sub_trees = []
-    for word in dependency_parser(comp.sent): 
-        if word.dep_ in ('prep', 'conj', 'relcl'):
-            sub_trees.append(''.join(w.text_with_ws for w in word.subtree))
-    stem_q = {d.lemma_ for d in q.dep_parse}
-    best = []
-    for t in sub_trees:
-        parse = dependency_parser(t)
-        for p in parse.ents:
-            if p.lemma_ in stem_q: #inverted overlap -> the question won't contain answer
-                best.append(t)
-    if len(best) == 0:
-        return ''.join(sub_trees) # none can be rated higher so return who sentence
-    return best[rand.randint(0,len(best)-1)] #any could be the answer. Make a guess
-
+#split on in sentence punctuation to increase percision but it didnt really do anything
+#other than a few cases
+"""   for tree in sub_trees:
+        split_punc =  re.split(sent_punc_re,tree)
+        for s in split_punc:
+            stem_tree = ' '.join(w.lemma_ for w in dependency_parser(s))
+            overlap = computeOverlap(stem_tree, stem_q)
+            if overlap > best[1]:
+                best = (s, overlap) """
 
 # Assumption that the answer relating to the NP in the question, is near the NP in the sentence
 # Strip off words that are not likely to relate to the answer to increase percision
@@ -202,7 +195,7 @@ def npExtraction(sentence, q):
             if split_sent[i].find(phrase_arr[0]) != -1:
                 start = i
                 break      
-        subs.append(split_sent[start-3:start+len(phrase_arr)+7])
+        subs.append(split_sent[start-6:start+len(phrase_arr)+6])
     candidate = ('',0)
     split_q = set(q.question.split())
     for s in subs:

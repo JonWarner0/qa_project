@@ -2,6 +2,7 @@ import os
 import sys
 import nltk 
 from nltk.corpus import wordnet as wn
+import spacy  
 import re
 
 """ 
@@ -16,17 +17,7 @@ except Exception:
     nltk.download('punkt')
     sent_detector = nltk.data.load('tokenizers/punkt/english.pickle')
 
-
-dependency_parser = None
-try:
-    import spacy    # Dependency parsing install
-    dependency_parser = spacy.load('en_core_web_sm') 
-except Exception:
-    os.system('pip3 install -U spacy')
-    os.system('python3 -m spacy download en_core_web_sm')
-    import spacy
-    dependency_parser = spacy.load('en_core_web_sm')
-
+dependency_parser = spacy.load('en_core_web_sm') 
 
 # regex extracting tags
 noun_re = re.compile(r'PROPN | PRON | NOUN | NUM')  #Nouns and Nums together for simplicity
@@ -34,7 +25,8 @@ verb_re = re.compile(r'VERB')
 punc_re = re.compile(r"[\w']+|[.,!?;]") # use findall 
 sent_punc_re = re.compile(r'[,;]')
 question_word = re.compile(r'(?i)who|what|when|where|how|why')
-who_re = re.compile(r'(?i)who')
+how_re = re.compile(r'(?i)how')
+digit_re = re.compile(r'\d+')
 
 """ 
 -------- Class Definitions -------- 
@@ -72,7 +64,7 @@ class composition:
         self.noun_phrase = {t.text for t in sent.noun_chunks}
         self.verbs = set()
         self.score = 0
-        self.matched_verbs = set() #store then extract the subtreee around this for answer
+        
         for t in sent:
             if question_word.search(t.lemma_):
                 self.q_tag = t.lemma_
@@ -108,7 +100,7 @@ def verbMatching(story, question):
             q = syns_q_v.union(hyper_q_v)
             if v in q: 
                 target.score += 3 # weight verbs heavily as they are more unique
-                #TODO: figure out which verb word to add . some mapping of syns and hypers
+
 
 def nounMatching(story, question):
     """ Computes the overlap of of the NER phrases and NP that appear in 
@@ -169,36 +161,11 @@ def subDepExtraction(comp, q):
         overlap = computeOverlap(stem_tree, stem_q)
         if overlap > best[1]:
             best = (tree, overlap) 
+    if how_re.search(q.question) and digit_re.search(best[0]):
+        return digit_re.search(best[0]).group(0)
     return best[0]
 
-
-# Assumption that the answer relating to the NP in the question, is near the NP in the sentence
-# Strip off words that are not likely to relate to the answer to increase percision
-#FIXME: recall is dropping. Find better IE procedure
-def npExtraction(sentence, q):
-    """Find the substring with the highest overlap to determine the most
-        likely answer boundary. Based on NPs"""
-    subs = []
-    split_sent = sentence.sent.split()
-    for np in sentence.noun_phrase:
-        phrase_arr = np.split()
-        start = 0
-        for i in range(len(split_sent)): # needed loop to handle punctuation
-            if split_sent[i].find(phrase_arr[0]) != -1:
-                start = i
-                break      
-        subs.append(split_sent[start-6:start+len(phrase_arr)+6])
-    candidate = ('',0)
-    split_q = set(q.question.split())
-    for s in subs:
-        set_s = set(s)
-        sub_score = len(set_s.intersection(split_q))
-        if sub_score > candidate[1]:
-            candidate = (s, sub_score)
-    if candidate[1] == 0: # unsuccessful search
-        return sentence.sent
-    return ' '.join(candidate[0])
-
+#2000-W02-3-1
 
 def extractStory(_path):
     """ Extract story info and return a story object """

@@ -8,7 +8,6 @@ import re
 """ 
 -------- Global Definitions and Setup/Downloads -------- 
 """
-
 sent_detector = None # Sentence boundaries
 try:
     import nltk.data
@@ -19,10 +18,10 @@ except Exception:
 
 dependency_parser = spacy.load('en_core_web_sm') 
 
-# regex extracting tags
+# regex extraction patterns
 noun_re = re.compile(r'PROPN | PRON | NOUN | NUM')  #Nouns and Nums together for simplicity
 verb_re = re.compile(r'VERB') 
-punc_re = re.compile(r"[\w']+|[.,!?;]") # use findall 
+punc_re = re.compile(r"[\w']+|[.,!?;]") 
 sent_punc_re = re.compile(r'[,;]')
 question_word = re.compile(r'(?i)who|what|when|where|how|why')
 how_re = re.compile(r'(?i)how')
@@ -59,7 +58,7 @@ class composition:
     """ Takes a spacy.Doc arguement and extracts needed information """
     def __init__(self, sent):
         self.sent = sent.text[:-1]
-        self.ner = {t.text for t in sent.ents} #add .label_ for ORG, etc..
+        self.ner = {t.text for t in sent.ents} 
         self.nouns = set()
         self.noun_phrase = {t.text for t in sent.noun_chunks}
         self.verbs = set()
@@ -127,8 +126,8 @@ def getSynsetsAndHypernyms(words, pos_):
         for syns in wn.synsets(w, pos=pos_):
             if counter > 6: # take only top 6 synonyms 
                 break
-            synonyms.add(syns.name().split('.')[0]) #hard coded for now bc im lazy
-            for s in syns.hypernyms()[:3]:
+            synonyms.add(syns.name().split('.')[0]) 
+            for s in syns.hypernyms()[:3]: # traverse up the hypernym tree to find commonalities
                 hypernyms.add(s.name().split('.')[0])
                 for xs in s.hypernyms()[:2]:
                     hypernyms.add(xs.name().split('.')[0])
@@ -145,7 +144,6 @@ def subDepExtraction(comp, q):
     Requires that the most likely sentence is passed in as composition object"""
     sub_trees = []
     for word in dependency_parser(comp.sent): #extract the subtrees based on verbs
-        # Prep improved percision but dropped recall
         if word.dep_ in ('xcomp','ccomp','cc','relcl','prep','advcl'):
             sub_trees.append(''.join(w.text_with_ws for w in word.subtree))
         elif word.dep_ in ('conj','dobj','mark'):
@@ -156,16 +154,15 @@ def subDepExtraction(comp, q):
         return sub_trees[0]
     best = ('',0)
     stem_q = ' '.join(d.lemma_ for d in q.dep_parse)
-    for tree in sub_trees:
+    for tree in sub_trees:  # Compare overlap for most likely subtree
         stem_tree = ' '.join(w.lemma_ for w in dependency_parser(tree))
         overlap = computeOverlap(stem_tree, stem_q)
         if overlap > best[1]:
             best = (tree, overlap) 
-    if how_re.search(q.question) and digit_re.search(best[0]):
+    if how_re.search(q.question) and digit_re.search(best[0]): # filter to increase percision
         return digit_re.search(best[0]).group(0)
     return best[0]
 
-#2000-W02-3-1
 
 def extractStory(_path):
     """ Extract story info and return a story object """

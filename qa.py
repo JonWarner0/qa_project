@@ -22,9 +22,9 @@ dependency_parser = spacy.load('en_core_web_sm')
 noun_re = re.compile(r'PROPN | PRON | NOUN | NUM')  #Nouns and Nums together for simplicity
 verb_re = re.compile(r'VERB') 
 punc_re = re.compile(r"[\w']+|[.,!?;]") 
-sent_punc_re = re.compile(r'[,;]')
 question_word = re.compile(r'(?i)who|what|when|where|how|why')
 how_re = re.compile(r'(?i)how')
+where_re = re.compile(r'(?i)where')
 digit_re = re.compile(r'\d+')
 
 """ 
@@ -80,8 +80,6 @@ def getAnswer(story,question):
     verbMatching(story,question)
     nounMatching(story,question)
     top = max(story.targets, key=lambda k:k.score) 
-    if top.score < 4: # Did not score high enough to be a likely answer 
-        return ''  
     if top.score < 6: # Not enough there to effectively extract substing but likely contains answer
         return top.sent
     return subDepExtraction(top,question) # extract substring
@@ -159,8 +157,15 @@ def subDepExtraction(comp, q):
         overlap = computeOverlap(stem_tree, stem_q)
         if overlap > best[1]:
             best = (tree, overlap) 
-    if how_re.search(q.question) and digit_re.search(best[0]): # filter to increase percision
-        return digit_re.search(best[0]).group(0)
+    # filters to increase percision at small cost to recall
+    if how_re.search(q.question) and digit_re.search(best[0]): 
+        return digit_re.search(best[0]).group(0)               
+    if where_re.search(q.question) and len(comp.ner) > 0: 
+        temp = dependency_parser(best[0])
+        ner = {n for n in temp.ents}
+        for n in ner:
+            if n not in q.target.ner:
+                return n
     return best[0]
 
 

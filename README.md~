@@ -1,6 +1,6 @@
 # qa_project: Jonathan Warner
 
-Running
+Running: Tested on Python 3.8.0
 * Run QA-script.txt to download nltk and spacy with their respective libraries that are used
 * Run 'python3 qa.py <input_file>' to run the program and answers are printed to standard out
 

@@ -24,7 +24,6 @@ verb_re = re.compile(r'VERB')
 punc_re = re.compile(r"[\w']+|[.,!?;]") 
 question_word = re.compile(r'(?i)who|what|when|where|how|why')
 how_re = re.compile(r'(?i)how')
-where_re = re.compile(r'(?i)where')
 digit_re = re.compile(r'\d+')
 
 """ 
@@ -160,12 +159,6 @@ def subDepExtraction(comp, q):
     # filters to increase percision at small cost to recall
     if how_re.search(q.question) and digit_re.search(best[0]): 
         return digit_re.search(best[0]).group(0)               
-    """ if where_re.search(q.question) and len(comp.ner) > 0: 
-        temp = dependency_parser(best[0])
-        ner = {n for n in temp.ents}
-        for n in ner:
-            if n not in q.target.ner:
-                return n  """
     return best[0]
 
 

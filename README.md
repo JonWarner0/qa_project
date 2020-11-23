@@ -7,8 +7,8 @@ Running: Tested on Python 3.8.0
 
 (a) Used nltk for sentence detection (punkt tokenizer) and access to wordnet for synonyms and hypernyms
     	 https://www.nltk.org
-    Used spacy for dependency parsing, pos tagging, NER, NP extraction, and stemming
+    Used spacy for dependency parsing, pos tagging, NER, NP extraction, and lemmatization.
     	 https://spacy.io
-(b) One document takes about 3 seconds
+(b) One document takes about 2 seconds
 (c) I am a one man team
-(d) My program only extracts the sentence that is most likley to contain the answer and is based on the verbs that appear in the question and the story. Until I can make a good scoring procedure, the nouns are not considered unless there are no matching verbs.
+(d) No known limitations. It was tested on testset1 and runs without error.

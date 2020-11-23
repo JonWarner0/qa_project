@@ -160,12 +160,12 @@ def subDepExtraction(comp, q):
     # filters to increase percision at small cost to recall
     if how_re.search(q.question) and digit_re.search(best[0]): 
         return digit_re.search(best[0]).group(0)               
-    if where_re.search(q.question) and len(comp.ner) > 0: 
+    """ if where_re.search(q.question) and len(comp.ner) > 0: 
         temp = dependency_parser(best[0])
         ner = {n for n in temp.ents}
         for n in ner:
             if n not in q.target.ner:
-                return n
+                return n  """
     return best[0]
 
 

@@ -1,4 +1,4 @@
-/Users/jonwarner/Documents/class/fall2020/cs5340/QA_project/qa_project/Testset1/
+/home/u1003431/cs5340/qa_project/qa_project/Testset1/
 1999-W07-5
 1999-W08-1
 1999-W08-5

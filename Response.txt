@@ -2,34 +2,34 @@ QuestionID: 1999-W07-5-1
 Answer: when he got the word the boys were safe and sound
 
 QuestionID: 1999-W07-5-2
-Answer: Kolla, who celebrated his 14th birthday on Tuesday, two days after he and his brother were caught out overnight at the Schweitzer Mountain Ski Resort in Sandpoint, Idaho
+Answer: 
 
 QuestionID: 1999-W07-5-4
 Answer: Shivering, hungry, lost on a mountain in blizzard conditions, two Alberta boys spent a night in a snow cave sleeping in shifts and dreaming of food and rescue
 
 QuestionID: 1999-W07-5-5
-Answer: after four hours of post-holing uphill through snow up to their waists
+Answer: Shivering, hungry, lost on a mountain in blizzard conditions, two Alberta boys spent a night in a snow cave sleeping in shifts and dreaming of food and rescue
 
 QuestionID: 1999-W07-5-6
-Answer: after four hours of post-holing uphill through snow up to their waists
+Answer: Using their hands, the two dug into the snow hollow around the base of a tree, covered the floor with pine boughs and settled in for a long, cold night
 
 QuestionID: 1999-W07-5-7
-Answer: that the search parties were called in and 
+Answer: that the search parties were called in and the search called off
 
 QuestionID: 1999-W07-5-8
 Answer: the Kolla brothers' cool heads, backwoods savvy and faith in themselves 
 
 QuestionID: 1999-W07-5-12
-Answer: The family credits winter camping tips from a friend for saving the boys' lives
+Answer: 
 
 QuestionID: 1999-W08-1-1
-Answer: The trial of the American president ended Friday when he was found not guilty of both charges against him
+Answer: during the trial, which means Americans think he is still fit to be their president
 
 QuestionID: 1999-W08-1-2
 Answer: 50
 
 QuestionID: 1999-W08-1-3
-Answer: of obstructing justice (hiding evidence, or getting others to lie in court
+Answer: of the charge of perjury (lying in court) 
 
 QuestionID: 1999-W08-1-4
 Answer: Clinton had denied having an affair with White House intern, Monica Lewinsky, but later admitted that he did have a relationship with her
@@ -44,10 +44,10 @@ QuestionID: 1999-W08-5-2
 Answer: These satellites  can help farmers forecast crop yields, keep track of ice conditions in the Arctic ocean  and help mining companies look for mineral resources
 
 QuestionID: 1999-W08-5-4
-Answer: according to NASA
+Answer: A new Canadian radar satellite sees too much, too clearly, according to NASA,  the American space agency
 
 QuestionID: 1999-W08-5-5
-Answer: A new Canadian radar satellite sees too much, too clearly, according to NASA,  the American space agency
+Answer: 
 
 QuestionID: 1999-W08-5-6
 Answer: of strategic development for the Canadian Space  Agency
@@ -56,46 +56,46 @@ QuestionID: 1999-W09-5-1
 Answer: Moshe Akavak, a guard with the BCC says learning the traditional ways will help the prisoners' rehabilitation
 
 QuestionID: 1999-W09-5-2
-Answer: Moshe Akavak, a guard with the BCC says learning the traditional ways will help the prisoners' rehabilitation
+Answer: 
 
 QuestionID: 1999-W09-5-3
-Answer: it's money well spent
+Answer: Whenever you have inmates that come out of jail feeling good about themselves and wanting to succeed 
 
 QuestionID: 1999-W09-5-5
 Answer: costing tens of thousands of dollars for equipment, clothing and supervision
 
 QuestionID: 1999-W09-5-6
-Answer: "If they go out, they keep themselves busy doing hunting, repairing equipment
+Answer: The party is hunting caribou, far from the city on the frozen tundra
 
 QuestionID: 1999-W09-5-7
-Answer: Inmates at a prison in Iqaluit, on Baffin Island in the North West Territories (soon to be Nunavut) are being given something that few prisoners in the world are allowed: guns
+Answer: The party is hunting caribou, far from the city on the frozen tundra
 
 QuestionID: 1999-W09-5-8
-Answer: Inmates at a prison in Iqaluit, on Baffin Island in the North West Territories (soon to be Nunavut) are being given something that few prisoners in the world are allowed: guns
+Answer: 
 
 QuestionID: 1999-W20-4-2
-Answer: Sean used to beg on a patch of downtown Ottawa sidewalk, wedged between a bank and a grocery store
+Answer: to beg on a patch of downtown Ottawa sidewalk, 
 
 QuestionID: 1999-W20-4-4
 Answer: Sean's launching a Charter challenge against Ottawa's anti-panhandling laws after he was ticketed for begging on the street
 
 QuestionID: 1999-W20-4-6
-Answer: Sean's court case is still a few weeks away
+Answer: 
 
 QuestionID: 1999-W20-4-7
-Answer: Even though these freedoms are very important, governments can sometimes limit them
+Answer: Under section 2 of the Charter, Canadians are guaranteed freedom of thought, belief and expression
 
 QuestionID: 1999-W26-1-1
 Answer: Over the weekend, NATO authorities also reached a peace deal with the Kosovo Liberation Army (KLA), a group of Yugoslavians of Albanian heritage who were fighting against the Yugoslavian army
 
 QuestionID: 1999-W26-1-2
-Answer: in countries around the world, including Canada
+Answer: in countries around the world
 
 QuestionID: 1999-W26-1-3
 Answer: to live together in peace
 
 QuestionID: 1999-W26-1-6
-Answer: with the enormous task of rebuilding and overcoming the ethnic hatred that started the conflict
+Answer: with a plan to rebuild the region and make sure that a lasting peace can be maintained
 
 QuestionID: 1999-W26-1-7
 Answer: It could cost more than a hundred billion dollars to rebuild what NATO destroyed in Yugoslavia
@@ -104,16 +104,16 @@ QuestionID: 1999-W26-1-9
 Answer: of Yugolsavians of Serbian heritage 
 
 QuestionID: 1999-W27-3-1
-Answer: Mr. Neudorf is suing Ms. McLachlan for song writing credit and a share of money from her first album, recorded more than 10 years ago
+Answer: for singer Sarah McLachlan and producer Daryl Neudorf 
 
 QuestionID: 1999-W27-3-2
 Answer: Closing arguments are expected to wrap up today but because of the complexity of the case, it may be months before a decision is made
 
 QuestionID: 1999-W27-3-4
-Answer: he co-wrote four of those songs, including Sad Clown
+Answer: Now the two are asking the court to sort it all out
 
 QuestionID: 1999-W27-3-5
-Answer: Mr. Neudorf is given credit for pre-production, coordination and production assistance
+Answer: On the album cover Mr. Neudorf is given credit for pre-production, coordination and production assistance
 
 QuestionID: 1999-W27-3-6
 Answer: "What is the act of authorship," says Jennifer Conkie, Ms. McLachlan's lawyer, "as opposed to all the other kinds of things musicians do in a jam session
@@ -122,10 +122,10 @@ QuestionID: 1999-W27-3-8
 Answer: Canada's copyright act came into effect in 1924, and is based largely on the law in the United Kingdom
 
 QuestionID: 1999-W27-3-9
-Answer: Closing arguments are expected to wrap up today but because of the complexity of the case, it may be months before a decision is made
+Answer: The case has attracted international attention not only because of Sarah McLachlan's fame, but also because of the legal issues it raises
 
 QuestionID: 1999-W27-3-10
-Answer: to a question of his word against hers
+Answer: Canada's copyright act came into effect in 1924, and is based largely on the law in the United Kingdom
 
 QuestionID: 1999-W28-1-1
 Answer: Funeral services were held over the weekend for Tyrell Dueck
@@ -134,7 +134,7 @@ QuestionID: 1999-W28-1-2
 Answer: The 13-year-old from Martensville
 
 QuestionID: 1999-W28-1-3
-Answer: in Tyrell's case, government interference meant alternative treatment may have been delayed too long
+Answer: raise money to pay for Tyrell's treatment in Mexico
 
 QuestionID: 1999-W28-1-4
 Answer: Shortly after, Tyrell's parents took the boy to Mexico for the alternative treatment
@@ -146,16 +146,16 @@ QuestionID: 1999-W28-1-6
 Answer: When it was discovered the cancer had spread to Tyrell's lungs
 
 QuestionID: 1999-W28-1-7
-Answer: in Tyrell's case, government interference meant alternative treatment may have been delayed too long
+Answer: , government interference meant alternative treatment may have been delayed too long
 
 QuestionID: 1999-W28-1-8
-Answer: raise money to pay for Tyrell's treatment in Mexico
+Answer: The Saskatchewan government didn't think alternative medicine would work, and felt Tyrell's parents were pressuring him to refuse traditional medicine
 
 QuestionID: 1999-W29-4-1
-Answer: Amber had the left side of her brain removed
+Answer: after having part of her brain removed
 
 QuestionID: 1999-W29-4-2
-Answer: Amber suffers from Rasmussen's disease
+Answer: 
 
 QuestionID: 1999-W29-4-3
 Answer: of brain disease that can occur at any time in childhood
@@ -164,7 +164,7 @@ QuestionID: 1999-W29-4-4
 Answer: of brain disease that can occur at any time in childhood
 
 QuestionID: 1999-W29-4-5
-Answer: 1
+Answer: As a result, the affected brain cells malfunction, and fire off electrical energy when they are not supposed to
 
 QuestionID: 1999-W29-4-6
 Answer: It affects only about 1,000 people around the world
@@ -176,37 +176,37 @@ QuestionID: 1999-W29-4-8
 Answer: The surgery performed on Amber is called a hemispherectomy, and is usually performed on younger patients
 
 QuestionID: 1999-W31-1-1
-Answer: Some little fish have become a big threat in Lake Ontario
+Answer: 
 
 QuestionID: 1999-W31-1-2
 Answer: Environment Canada is warning people in Ontario about a foreign fish called the round goby
 
 QuestionID: 1999-W31-1-3
-Answer: The round goby also has the advantage of being able to feed right through the night
+Answer: It eats the eggs and young of the sport fish and chases larger fish away from food sources, leaving little for them to eat
 
 QuestionID: 1999-W31-1-4
 Answer: It can do this because it has special sensors
 
 QuestionID: 1999-W31-1-5
-Answer: The round goby is reducing precious sport fish stocks in the lake
-
-QuestionID: 1999-W31-1-6
-Answer: It eats the eggs and young of the sport fish and chases larger fish away from food sources, leaving little for them to eat
-
-QuestionID: 1999-W31-1-7
 Answer: likely in water held in the bottom of a boat
 
+QuestionID: 1999-W31-1-6
+Answer: likely in water held in the bottom of a boat
+
+QuestionID: 1999-W31-1-7
+Answer: these measures will keep the round goby from taking over the waterways of central Canada
+
 QuestionID: 1999-W31-3-1
-Answer: he will stay on as leader of the Nova Scotia Liberal Party despite losing his job as premier
+Answer: as many experts thought it would be
 
 QuestionID: 1999-W31-3-2
 Answer: The PC party defeated both the Liberal Party government led by Premier Russell MacLellan and Robert Chisholm's New Democratic Party
 
 QuestionID: 1999-W31-3-3
-Answer: 29
+Answer: 12
 
 QuestionID: 1999-W31-3-4
-Answer: that no one party had more than half the seats in the legislature
+Answer: meaning they will have more members in the legislature than both parties combined
 
 QuestionID: 1999-W31-3-5
 Answer: The party placed third in the last election
@@ -218,7 +218,7 @@ QuestionID: 1999-W31-3-7
 Answer: to call the election after the other parties voted against his budget
 
 QuestionID: 1999-W31-3-8
-Answer: that no one party had more than half the seats in the legislature
+Answer: meaning they will have more members in the legislature than both parties combined
 
 QuestionID: 1999-W31-3-9
 Answer: the premier must either quit, or call a new election
@@ -230,7 +230,7 @@ QuestionID: 1999-W31-5-2
 Answer: to crash land on the moon early Saturday morning
 
 QuestionID: 1999-W31-5-3
-Answer: to go to the moon
+Answer: the biggest disappointment in his life was "not going to the moon and banging on it with my own hammer
 
 QuestionID: 1999-W31-5-4
 Answer: that the impact of Prospector's crash into the moon will create a plume of water which will be visible from Earth with a telescope
@@ -245,13 +245,13 @@ QuestionID: 1999-W31-5-7
 Answer: with discovering about 20 comets and 800 asteroids
 
 QuestionID: 1999-W31-5-8
-Answer: Shoemaker gained worldwide fame in 1994, when he helped discover the comet Shoemaker-Levy 9
+Answer: 
 
 QuestionID: 1999-W31-5-9
 Answer: He taught Apollo astronauts about craters
 
 QuestionID: 1999-W31-5-10
-Answer: Eugene Shoemaker may finally fulfill his lifelong wish to go to the moon
+Answer: He applied to be an astronaut in the 1960s, but was rejected because of a medical problem
 
 QuestionID: 1999-W31-5-11
 Answer: Shoemaker said shortly before his death the biggest disappointment in his life was "not going to the moon and banging on it with my own hammer.
@@ -275,7 +275,7 @@ QuestionID: 1999-W32-4-6
 Answer: the idea was not as far-fetched as it may sound since IBM's Deep Blue supercomputer beat chess champion Garry Kasparov
 
 QuestionID: 1999-W32-4-8
-Answer: At the third annual Robot World Cup Soccer tournament in Sweden, Iranian robots beat Italian robots 3-1
+Answer: of the RoboCup Federation 
 
 QuestionID: 1999-W32-4-9
 Answer: to be competing in the 2002 tournament
@@ -284,7 +284,7 @@ QuestionID: 1999-W32-4-11
 Answer: in Australia 
 
 QuestionID: 1999-W32-5-1
-Answer: across part of the Trans-Canada highway
+Answer: across part of the Trans-Canada highway, near Banff, Alberta
 
 QuestionID: 1999-W32-5-2
 Answer: - Alberta border caused the slides
@@ -308,10 +308,10 @@ QuestionID: 1999-W32-5-8
 Answer: - Alberta border caused the slides
 
 QuestionID: 1999-W32-5-10
-Answer: quickly and powerfully
+Answer: Once a slope is weakened, almost anything can start a mudslide
 
 QuestionID: 1999-W33-3-1
-Answer: The last solar eclipse of the millennium brightened the morning for millions of people in Europe on Wednesday
+Answer: of the millennium 
 
 QuestionID: 1999-W33-3-2
 Answer: that it was a total eclipse, where the moon totally blocks the sun
@@ -323,31 +323,31 @@ QuestionID: 1999-W33-3-4
 Answer: What made this eclipse special is that it was a total eclipse, where the moon totally blocks the sun
 
 QuestionID: 1999-W33-3-5
-Answer: of eclipses 
+Answer: there can be in one year 
 
 QuestionID: 1999-W33-3-6
-Answer: The last solar eclipse of the millennium brightened the morning for millions of people in Europe on Wednesday
+Answer: 
 
 QuestionID: 1999-W33-3-7
-Answer: These total eclipses last for a few minutes, and are rare
+Answer: 
 
 QuestionID: 1999-W33-3-8
 Answer: In twenty five years an astronomer who observed every total solar eclipse, would watch only about an hour of total eclipses
 
 QuestionID: 1999-W33-3-9
-Answer: A partial eclipse {where the moon covers part, but not all of the sun} 
+Answer: that it was a total eclipse, where the moon totally blocks the sun
 
 QuestionID: 1999-W33-3-10
-Answer: What made this eclipse special is that it was a total eclipse, where the moon totally blocks the sun
+Answer: 
 
 QuestionID: 1999-W33-5-2
 Answer: the federal and provincial governments to help clean up the harbour
 
 QuestionID: 1999-W33-5-3
-Answer: because the town is a United Nations World Heritage Site
+Answer: As more people visit the town
 
 QuestionID: 1999-W33-5-4
-Answer: Lunenburg is a special case because of 
+Answer: Lunenburg is a special case because of it's an historical site
 
 QuestionID: 1999-W33-5-5
 Answer: as a friendly competition between US and Canadian fishing schooners
@@ -356,10 +356,10 @@ QuestionID: 1999-W33-5-6
 Answer: The Bluenose won the race four times
 
 QuestionID: 1999-W33-5-7
-Answer: Lunenburg Harbour is famous for being the home of the Bluenose and the Bluenose II
+Answer: 
 
 QuestionID: 1999-W33-5-8
-Answer: Lunenburg is a special case because of 
+Answer: Lunenburg is a special case because of it's an historical site
 
 QuestionID: 1999-W33-5-9
 Answer: for being the home of the Bluenose and the Bluenose II
@@ -368,13 +368,13 @@ QuestionID: 1999-W33-5-10
 Answer: the federal and provincial governments to pay half the cost of cleaning up Lunenburg Harbour
 
 QuestionID: 1999-W34-4-1
-Answer: The centre of the earthquake hit Izmit, the region just south of Istanbul, the country's capital
+Answer: The centre of the earthquake the region just south of Istanbul, the country's capitalhit Izmit, 
 
 QuestionID: 1999-W34-4-2
-Answer: An powerful earthquake shook a densely populated part of western Turkey early Tuesday
+Answer: 
 
 QuestionID: 1999-W34-4-3
-Answer: The centre of the earthquake hit Izmit, the region just south of Istanbul, the country's capital
+Answer: The centre of the earthquake the region just south of Istanbul, the country's capitalhit Izmit, 
 
 QuestionID: 1999-W34-4-4
 Answer: Rescue workers spent hours digging through the rubble, frantically trying to save people trapped under concrete and metal
@@ -389,22 +389,22 @@ QuestionID: 1999-W34-4-7
 Answer: The earthquake had a magnitude of 7.8, according to the National Earthquake Information Centre in Colorado
 
 QuestionID: 1999-W34-4-8
-Answer: An powerful earthquake shook a densely populated part of western Turkey early Tuesday
+Answer: 
 
 QuestionID: 1999-W34-4-9
-Answer: An observatory in Istanbul said more than 250 aftershocks followed the first tremor
+Answer: 
 
 QuestionID: 1999-W34-4-11
-Answer: Officials have warned people not to return to buildings with even some sign of structural damage, 
+Answer: Magnitude measures the amount of energy released by an earthquake
 
 QuestionID: 1999-W35-5-2
-Answer: television viewing frequently limits children's time to develop vital activities such as playing, reading, learning to talk, spending time with friends and family, storytelling, getting regular exercise, and developing other physical, mental and social skills
+Answer: for parents to watch television with their children and discuss the programs
 
 QuestionID: 1999-W35-5-3
 Answer: doctors to monitor how much time children are sitting in front of electronic screens
 
 QuestionID: 1999-W35-5-4
-Answer: parents to limit preschoolers to one hour of TV a day
+Answer: watching television each week
 
 QuestionID: 1999-W35-5-5
 Answer: At current Canadian rates, the average high school graduate will have spent more time watching TV than they did learning in a classroom
@@ -437,19 +437,19 @@ QuestionID: 1999-W37-2-9
 Answer: Chirac visited a community hall run by the Nunavut Francophone Association, where he opened a virtual museum of Inuit art on the Internet, a project financed by the French government
 
 QuestionID: 1999-W37-2-10
-Answer: Earlier Chirac gave the impression he would leave the territory empty-handed
+Answer: 
 
 QuestionID: 1999-W37-4-1
-Answer: Clarkson, who currently heads the board of the Canadian Museum of Civilization, officially replaces Romeo LeBlanc on Oct. 7
+Answer: The 60-year-old Clarkson was born in Hong Kong in 1939, but came to Canada as a refugee with her family in 1942
 
 QuestionID: 1999-W37-4-2
-Answer: The 60-year-old Clarkson was born in Hong Kong in 1939, but came to Canada as a refugee with her family in 1942
+Answer: who loves her adopted country and its people
 
 QuestionID: 1999-W37-4-3
 Answer: Adrienne Clarkson calls it a sign of Canadian evolution
 
 QuestionID: 1999-W37-4-4
-Answer: The 60-year-old Clarkson was born in Hong Kong in 1939, but came to Canada as a refugee with her family in 1942
+Answer: Prime Minister Jean Chretien approached her "early in the summer" about replacing Governor-General Romeo LeBlanc, who had asked to step down
 
 QuestionID: 1999-W37-4-5
 Answer: she plans to play an active, yet sensible role in Canadian unity
@@ -458,7 +458,7 @@ QuestionID: 1999-W37-4-6
 Answer: to use the governor general's Quebec City residence, the Citadel, more often
 
 QuestionID: 1999-W37-4-7
-Answer: The 60-year-old Clarkson was born in Hong Kong in 1939, but came to Canada as a refugee with her family in 1942
+Answer: Prime Minister Jean Chretien approached her "early in the summer" about replacing Governor-General Romeo LeBlanc, who had asked to step down
 
 QuestionID: 1999-W37-4-9
 Answer: for her career with CBC-TV, where she was a high-profile interviewer and host for three decades
@@ -467,7 +467,7 @@ QuestionID: 1999-W37-4-10
 Answer: 300
 
 QuestionID: 1999-W38-1-1
-Answer: at the beginning of the summer
+Answer: 600
 
 QuestionID: 1999-W38-1-2
 Answer: He said that the conflict in East Timor was a matter for Indonesians to work out between themselves
@@ -482,7 +482,7 @@ QuestionID: 1999-W38-1-5
 Answer: The East Timor capitol city of Dili has been turned into a burning, looted ghost town
 
 QuestionID: 1999-W38-1-7
-Answer: to allow United Nations peacekeeping troops into his country
+Answer: But yesterday the Indonesian President changed his mind
 
 QuestionID: 1999-W38-1-8
 Answer: Canada to have troops in East Timor within 30 days
@@ -494,7 +494,7 @@ QuestionID: 1999-W38-1-10
 Answer: that the people living in war-torn Kosovo are protected from violence
 
 QuestionID: 1999-W39-1-1
-Answer: So angry, in fact, that the association representing francophones in the Northwest Territories will be taking the territorial and federal governments to court
+Answer: , in fact, that the association representing francophones in the Northwest Territories will be taking the territorial and federal governments to court
 
 QuestionID: 1999-W39-1-2
 Answer: the territorial government isn't respecting its own language law
@@ -506,10 +506,10 @@ QuestionID: 1999-W39-1-4
 Answer: "The report itself, coming from the NWT language commissioner, is not even published in French," says Andre Legare, the president of the federation
 
 QuestionID: 1999-W39-1-5
-Answer: that 75 per cent of the documents it had requested from the territorial government in French were unavailable
+Answer: that their rights are being ignored
 
 QuestionID: 1999-W39-1-6
-Answer: "The report itself, coming from the NWT language commissioner, is not even published in French," says Andre Legare, the president of the federation
+Answer: The report itself, coming from the NWT language commissioner, is not even published in French
 
 QuestionID: 1999-W39-1-7
 Answer: to the Northwest Territories Supreme Court 
@@ -518,25 +518,25 @@ QuestionID: 1999-W39-1-8
 Answer: that is responsible for ensuring the equality of French and English in the territories, not only in the Northwest Territories, but also in Nunavut and in the Yukon
 
 QuestionID: 1999-W39-3-1
-Answer: It took him four tries, but yesterday evening New Democratic Party leader Gary Doer finally achieved what he set out to do: win a provincial election and become the Premier of Manitoba
+Answer: 45
 
 QuestionID: 1999-W39-3-2
 Answer: that he will now retire from politics
 
 QuestionID: 1999-W39-3-4
-Answer: finally winning feels good
+Answer: to get rid of what has become known as "hallway medicine
 
 QuestionID: 1999-W39-3-5
-Answer: It took him four tries, but yesterday evening New Democratic Party leader Gary Doer finally achieved what he set out to do
+Answer: 31
 
 QuestionID: 1999-W39-3-6
-Answer: that he will now retire from politics
+Answer: The NDP took about 45 per cent of the popular vote last night, the largest share the party has won since Howard Pawley swept Conservative leader Sterling Lyon out of power in 1981
 
 QuestionID: 1999-W39-3-7
 Answer: where every vote is counted again to make sure there are no mistakes -- in the suburban Winnipeg riding of Assiniboia, where Tory Linda McIntosh beat the NDP's Jim Rondeau by 3 votes
 
 QuestionID: 1999-W39-3-8
-Answer: The NDP took about 45 the largest share the party has won since Howard Pawley swept Conservative leader Sterling Lyon out of power in 1981per cent of the popular vote last night, 
+Answer: The NDP took about 45 per cent of the popular vote last night, the largest share the party has won since Howard Pawley swept Conservative leader Sterling Lyon out of power in 1981
 
 QuestionID: 1999-W39-3-9
 Answer: 45
@@ -545,7 +545,7 @@ QuestionID: 1999-W39-5-1
 Answer: They are protesting the lack of extra-curricular activities in schools
 
 QuestionID: 1999-W39-5-3
-Answer: in contract discussions with the provincial government
+Answer: To put pressure on the government
 
 QuestionID: 1999-W39-5-4
 Answer: Thirty-five students and one adult 
@@ -563,7 +563,7 @@ QuestionID: 1999-W39-5-8
 Answer: The students roved between two east-end high schools and drew between 300 and 400 students at the demonstration's peak
 
 QuestionID: 1999-W41-3-1
-Answer: A British Broadcasting Corporation reporter says the initial investigation suggests one of the trains passed one red and two yellow warning signals before hitting the other train
+Answer: 
 
 QuestionID: 1999-W41-3-2
 Answer: of London's Paddington Station
@@ -572,7 +572,7 @@ QuestionID: 1999-W41-3-3
 Answer: the initial investigation suggests one of the trains passed one red and two yellow warning signals before hitting the other train
 
 QuestionID: 1999-W41-3-4
-Answer: trying to account for missing passengers
+Answer: Authorities could not determine the total number of passengers aboard the trains
 
 QuestionID: 1999-W41-3-5
 Answer: that operate the two trains involved in the crash
@@ -581,22 +581,22 @@ QuestionID: 1999-W41-3-6
 Answer: 500
 
 QuestionID: 1999-W41-3-7
-Answer: looking for the causes of a train crash that killed at least 27 people and injured 160 near a London rail station yesterday
+Answer: Western and Thames 
 
 QuestionID: 1999-W41-3-8
-Answer: 27
+Answer: as they described how they frantically crawled out broken windows in the aftermath
 
 QuestionID: 1999-W41-3-9
 Answer: for many people in London and its surrounding communities
 
 QuestionID: 1999-W41-5-1
-Answer: Ms. Clarkson took the Oath of Office in front of Supreme Court of Canada Justice Claire L'Heureux Dube
+Answer: Next week Clarkson will read the speech from the throne to open the new session of parliament
 
 QuestionID: 1999-W41-5-2
 Answer: Ms. Clarkson took the Oath of Office in front of Supreme Court of Canada Justice Claire L'Heureux Dube
 
 QuestionID: 1999-W41-5-3
-Answer: The Governor General formally takes office once the oaths have been sworn and assumes the title "Excellency" while in office, and the lifetime title of "Right Honourable"
+Answer: Ms. Clarkson took the Oath of Office in front of Supreme Court of Canada Justice Claire L'Heureux Dube
 
 QuestionID: 1999-W41-5-5
 Answer: During a speech, Ms. Clarkson fought back tears as she praised her 92-year-old father, and her mother whom she said was there in spirit
@@ -614,25 +614,25 @@ QuestionID: 1999-W41-5-10
 Answer: over the swearing-in of the Prime Minister, the Chief Justice of Canada and cabinet ministers
 
 QuestionID: 1999-W43-5-1
-Answer: The Youth News Network, a news show that airs in some Canadian schools, is in trouble in Manitoba
+Answer: that airs in some Canadian schools, is in trouble in Manitoba
 
 QuestionID: 1999-W43-5-2
-Answer: that gives schools free equipment - like televisions and computers 
+Answer: that gives schools free equipment - like televisions and computers - 
 
 QuestionID: 1999-W43-5-3
 Answer: 20
 
 QuestionID: 1999-W43-5-4
-Answer: YNN presents a 12-minute daily feature shown during class time
+Answer: 12
 
 QuestionID: 1999-W43-5-6
-Answer: But they will not be allowed to extend those contracts
+Answer: We will not have commercials and products being sold in the classrooms
 
 QuestionID: 1999-W43-5-7
-Answer: to make sure it has an audience for its commercial news service
+Answer: Earlier this year, CBC4Kids ran stories about how schools in Quebec and Ontario are testing out the controversial concept in some classrooms
 
 QuestionID: 1999-W43-5-8
-Answer: on a promise the party made in the September provincial election campaign
+Answer: British Columbia, Nova Scotia and New Brunswick rejected the idea
 
 QuestionID: 1999-W43-5-9
 Answer: to show the program on a six-month trial basis
@@ -650,7 +650,7 @@ QuestionID: 1999-W45-5-4
 Answer: 10
 
 QuestionID: 1999-W45-5-5
-Answer: Students can rent instruments from the South, but MacLeod says running a successful music program in the North often requires providing instruments for students
+Answer: a music teacher was hired and the program was revived with money from the Baffin Divisional Education Council
 
 QuestionID: 1999-W45-5-6
 Answer: Music is often considered to be as important as subjects such as math or English, but it is a program that can give back to the community, he says
@@ -665,7 +665,7 @@ QuestionID: 1999-W45-5-9
 Answer: For example, the music society will be able to use the school's instruments and students may perform at community events
 
 QuestionID: 1999-W47-5-2
-Answer: Later, the doctor told me the baby was no longer living.
+Answer: that seven years ago she got pregnant for the second time
 
 QuestionID: 1999-W47-5-3
 Answer: The Chinese woman can't be identified because of a legal order, but it seems her claim to be accepted as a refugee to Canada may succeed where the claims of 32 people who arrived with her have failed
@@ -683,7 +683,7 @@ QuestionID: 1999-W47-5-7
 Answer: to have one child
 
 QuestionID: 1999-W47-5-9
-Answer: her family received a notice that she'll be sterilized so she can't have any more babies if she returns to China
+Answer: her family received a notice that she'll be sterilized 
 
 QuestionID: 1999-W47-5-11
 Answer: Larry Smeets, her lawyer, says the Federal Court of Appeal has concluded in the past that forced sterilization was a form of persecution, so this reason could be recognized as a reason for refugees to be allowed to remain in Canada
@@ -695,19 +695,19 @@ QuestionID: 1999-W49-5-3
 Answer: from the Jet Propulsion Laboratory
 
 QuestionID: 1999-W49-5-4
-Answer: For the first time ever, NASA an idea originally proposed by astronomer Carl Saganhas included a microphone on a spacecraft sent to Mars, 
+Answer: For the first time ever, NASA has included a microphone on a spacecraft sent to Mars, an idea originally proposed by astronomer Carl Sagan
 
 QuestionID: 1999-W49-5-5
 Answer: that the costly mission could hit a rock or lose contact with NASA scientists back home
 
 QuestionID: 1999-W49-5-6
-Answer: For the first time ever, NASA an idea originally proposed by astronomer Carl Saganhas included a microphone on a spacecraft sent to Mars, 
+Answer: there may be more underground
 
 QuestionID: 1999-W49-5-8
 Answer: skywatchers think of their god of war
 
 QuestionID: 1999-W49-5-10
-Answer: though the Lander's instruments cannot detect fossils or living organisms
+Answer: to be an area where climate changes caused layering of dust and ice that can be read like the rings of a tree trunk
 
 QuestionID: 1999-W51-1-1
 Answer: to help the then-promising 19-year-old McLachlan, who had just recently moved to Vancouver from Halifax, Nova Scotia, to pursue a career as a recording artist
@@ -728,10 +728,10 @@ QuestionID: 1999-W51-1-7
 Answer: McLachlan and the other defendants rejected Neudorf's claims, suggesting he was not hired to write songs, but rather to do pre-production work
 
 QuestionID: 1999-W51-1-8
-Answer: A Vancouver, British Columbia, judge has thrown out a copyright lawsuit against Canadian pop singer Sarah McLachlan
+Answer: 625
 
 QuestionID: 1999-W51-1-9
-Answer: the performer - the mastermind of the popular Lilith Fair concert series that toured North America - is "very, very pleased and relieved
+Answer: 
 
 QuestionID: 1999-W51-1-10
 Answer: During the trial, McLachlan occasionally sang and played a keyboard before court staff, reporters and teenaged fans to illustrate how songs are put together
@@ -743,10 +743,10 @@ QuestionID: 2000-W02-3-2
 Answer: when tiny amounts of chlorine are added to drinking water
 
 QuestionID: 2000-W02-3-3
-Answer: that can't afford expensive water filtration systems
+Answer: of trihalomethanes in drinking water 
 
 QuestionID: 2000-W02-3-4
-Answer: First, almost all sources of water contain microbiological organisms which have to be removed to prevent the outbreak of diseases such as typhoid fever and cholera
+Answer: You can leave water in an open container for 24 hours, and many of the chemicals will evaporate
 
 QuestionID: 2000-W02-3-8
 Answer: that the government "should have made everyone aware if there were risks -- like they are doing now -- two years ago
@@ -755,10 +755,10 @@ QuestionID: 2000-W02-3-9
 Answer: You can leave water in an open container for 24 hours, and many of the chemicals will evaporate
 
 QuestionID: 2000-W02-3-10
-Answer: The water contains higher than acceptable levels of chemicals known as trihalomethanes or THMs
+Answer: 
 
 QuestionID: 2000-W02-5-1
-Answer: of crisis on Canadian farms 
+Answer: on Canadian farms 
 
 QuestionID: 2000-W02-5-2
 Answer: to think we are an evil, uncaring, don't-give-a-damn-kind of community
@@ -767,28 +767,28 @@ QuestionID: 2000-W02-5-3
 Answer: to open people's eyes to the growing farm crisis in Canada
 
 QuestionID: 2000-W02-5-5
-Answer: the concert will achieve two things
+Answer: It will bring rural problems to the  attention of an urban audience, and it will show the country that Toronto cares
 
 QuestionID: 2000-W02-5-8
 Answer: to work out a new aid package for cash-strapped farmers
 
 QuestionID: 2000-W03-1-1
-Answer: John Morris Rankin played fiddle and piano with the popular musical family from Cape Breton
+Answer: who played music with Rankin in the mid '80s
 
 QuestionID: 2000-W03-1-2
 Answer: 1994
 
 QuestionID: 2000-W03-1-3
-Answer: Morris Green of Nova Scotia Emergency Health Services said one of the teenagers was being treated for hypothermia -- when one's body temperature drops abnormally low -- and the other two appeared to be OK.  John Morris Rankin played fiddle and piano with the popular musical family from Cape Breton
+Answer: 
 
 QuestionID: 2000-W03-1-4
-Answer: it appeared that Rankin told the teens to jump out of the truck as it skidded towards the water
+Answer: "John Morris told them to jump 
 
 QuestionID: 2000-W03-1-5
 Answer: he was stunned when he heard the news at the benefit
 
 QuestionID: 2000-W03-1-6
-Answer: John Morris Rankin played fiddle and piano with the popular musical family from Cape Breton
+Answer: of the former Celtic group the Rankins
 
 QuestionID: 2000-W03-1-7
 Answer: Besides Michael, 15, Rankin is survived by his wife Sally and daughter Molly, 13
@@ -806,10 +806,10 @@ QuestionID: 2000-W03-2-1
 Answer: to land near Mars' south pole
 
 QuestionID: 2000-W03-2-2
-Answer: "We didn't see anything," said Richard Cook, the spacecraft's project manager at NASA's Jet Propulsion Laboratory
+Answer: 
 
 QuestionID: 2000-W03-2-3
-Answer: The Mars Polar Lander could have touched down on the side of a canyon and toppled over
+Answer: its radio systems might have failed, or that the lander could have sunk into Martian dust
 
 QuestionID: 2000-W03-2-4
 Answer: NASA sent a spacecraft called the Mars Global Surveyor to take high-resolution images of the landing site to search for signs of the lander
@@ -821,10 +821,10 @@ QuestionID: 2000-W03-2-7
 Answer: After more than a month of searching for a signal from NASA's Mars Polar Lander, mission controllers have given up hope of finding it
 
 QuestionID: 2000-W03-2-8
-Answer: 8
+Answer: 
 
 QuestionID: 2000-W03-2-9
-Answer: its radio systems might have failed, or that the lander could have sunk into Martian dust
+Answer: at NASA's Jet Propulsion Laboratory
 
 QuestionID: 2000-W03-2-11
 Answer: The Mars Polar Lander could have touched down on the side of a canyon and toppled over
@@ -833,19 +833,19 @@ QuestionID: 2000-W03-3-2
 Answer: to give the teams money 
 
 QuestionID: 2000-W03-3-3
-Answer: to move to the United States - where they say business is better 
+Answer: with an idea to keep National Hockey League teams in Canada
 
 QuestionID: 2000-W03-3-4
 Answer: The average NHL player makes 1.3 million dollars a season
 
 QuestionID: 2000-W03-3-5
-Answer: He says that it is not fair that millionaire hockey players like Turner Stevenson and Pavel Bure are getting help while hundreds of Olympic athletes have to scramble every month just to pay their bills
+Answer: 
 
 QuestionID: 2000-W03-3-6
-Answer: He says his group struggles on a daily basis to help with basic needs of the poor
+Answer: 
 
 QuestionID: 2000-W03-3-7
-Answer: from Austin, Texas, where he is training for the Sydney Olympics
+Answer: The average NHL player makes 1.3 million dollars a season
 
 QuestionID: 2000-W03-3-8
 Answer: Manitoba Agriculture Minister Rosann Wowchuk calls it a slap in the face to farmers who have been lobbying Ottawa for help
@@ -866,7 +866,7 @@ QuestionID: 2000-W05-4-3
 Answer: Mehta had obtained permission to shoot the film from the Indian federal Information and Broadcasting Ministry, as well as the government of the state where the film is being shot
 
 QuestionID: 2000-W05-4-4
-Answer: But after the attack by fundamentalists (strongly religious people who refuse anything that disagrees with their faith), Indian government authorities withdrew their permission to shoot the film in Varanasi
+Answer: 
 
 QuestionID: 2000-W05-4-5
 Answer: Mehta had obtained permission to shoot the film from the Indian federal Information and Broadcasting Ministry, as well as the government of the state where the film is being shot
@@ -890,16 +890,16 @@ QuestionID: 2000-W06-5-2
 Answer: to join a team of six other climbers this May on a journey to  the top of the 5,945-metre Mount Logan in the Yukon Territory
 
 QuestionID: 2000-W06-5-3
-Answer: Watson plans to join a team of six other climbers this May on a journey to  the top of the 5,945-metre Mount Logan in the Yukon Territory
+Answer: 
 
 QuestionID: 2000-W06-5-4
-Answer: of the outdoors who describes himself as a "scrambler"  when it comes to climbing
+Answer: to become the first blind climber to reach the peak of Canada's highest mountain
 
 QuestionID: 2000-W06-5-5
 Answer: his lack of technical climbing ability is more of a challenge than his  blindness
 
 QuestionID: 2000-W06-5-6
-Answer: of the outdoors who describes himself as a "scrambler"  when it comes to climbing
+Answer: of a team that scaled Alaska's Mount McKinley  - North America's highest mountain
 
 QuestionID: 2000-W06-5-7
 Answer: of the outdoors who describes himself as a "scrambler"  when it comes to climbing
@@ -911,7 +911,7 @@ QuestionID: 2000-W06-5-9
 Answer: 12
 
 QuestionID: 2000-W06-5-10
-Answer: of the outdoors who describes himself as a "scrambler"  when it comes to climbing
+Answer: to become the first blind climber to reach the peak of Canada's highest mountain
 
 QuestionID: 2000-W07-5-1
 Answer: Austrian politician Joerg Haider has ended a controversial two-day visit to Canada
@@ -926,7 +926,7 @@ QuestionID: 2000-W07-5-5
 Answer: Jewish and human rights groups in Canada and the United States condemned his visit
 
 QuestionID: 2000-W07-5-6
-Answer: of Austria's Freedom Party 
+Answer: out of Montreal, Quebec's Dorval airport 
 
 QuestionID: 2000-W07-5-7
 Answer: because even their clothes reflect their beliefs
@@ -935,5 +935,5 @@ QuestionID: 2000-W07-5-8
 Answer: for the Tash Hasidic community 
 
 QuestionID: 2000-W07-5-9
-Answer: playfully juggling a snowball at the city's memorial to Raoul Wallenberg, a European hero who saved many Jews during the holocaust
+Answer: juggling a snowball at the city's memorial to Raoul Wallenberg, a European hero who saved many Jews during the holocaust
 

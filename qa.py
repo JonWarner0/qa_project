@@ -79,6 +79,8 @@ def getAnswer(story,question):
     verbMatching(story,question)
     nounMatching(story,question)
     top = max(story.targets, key=lambda k:k.score) 
+    if top.score < 4:
+        return ''
     if top.score < 6: # Not enough there to effectively extract substing but likely contains answer
         return top.sent
     return subDepExtraction(top,question) # extract substring
